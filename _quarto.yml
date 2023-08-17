@@ -62,7 +62,7 @@ website:
       - text: "News"
         file: news/index.qmd
       - icon: slack
-        href: "https://gsudatavizs2023.slack.com"
+        href: "https://gsudatavizf2023.slack.com"
         aria-label: Slack
       - icon: cloud-fill
         href: "https://posit.cloud"

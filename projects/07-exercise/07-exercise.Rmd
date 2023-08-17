@@ -45,7 +45,7 @@ You should also get rid of the intercept (`filter(term != "(Intercept)")`).
 
 ## Predicted values
 
-Show what happens to `percent_dem` as one (or more) of your model's variables changes. To make life easy, refer to the ["Predicted values and marginal effects in 2023"](https://datavizs23.classes.andrewheiss.com/example/07-example.html#predicted-values-and-marginal-effects-in-2023) section in this session's example and use `predictions()` rather than creating your own `newdata` data set by hand. You'll do something like this (assuming you're manipulating `per_capita_income`; try using a different variable when you do the assignment, though):
+Show what happens to `percent_dem` as one (or more) of your model's variables changes. To make life easy, refer to the ["Predicted values and marginal effects in 2023"](https://datavizf23.classes.andrewheiss.com/example/07-example.html#predicted-values-and-marginal-effects-in-2023) section in this session's example and use `predictions()` rather than creating your own `newdata` data set by hand. You'll do something like this (assuming you're manipulating `per_capita_income`; try using a different variable when you do the assignment, though):
 
 ```{r example-predictions, eval=FALSE}
 my_predictions <- predictions(
@@ -68,4 +68,4 @@ For extra fun times, if you feel like it, create a correlogram heatmap, either w
 
 **This is also entirely optional but will be super useful if you use regression for anything in your own work.**
 
-For extra super bonus fun times, create a more complex model that predicts `percent_dem` that uses polynomial terms (e.g. age squared) and/or interaction terms (e.g. age × state). Plot predictions from the model, use `marginaleffects()` to find the slopes of those predictions at different values, and plot the slopes in a marginal effects plot. (The ["Predicted values and marginal effects in 2023"](https://datavizs23.classes.andrewheiss.com/example/07-example.html#predicted-values-and-marginal-effects-in-2023) section from the example will be indispensable here.)
+For extra super bonus fun times, create a more complex model that predicts `percent_dem` that uses polynomial terms (e.g. age squared) and/or interaction terms (e.g. age × state). Plot predictions from the model, use `marginaleffects()` to find the slopes of those predictions at different values, and plot the slopes in a marginal effects plot. (The ["Predicted values and marginal effects in 2023"](https://datavizf23.classes.andrewheiss.com/example/07-example.html#predicted-values-and-marginal-effects-in-2023) section from the example will be indispensable here.)

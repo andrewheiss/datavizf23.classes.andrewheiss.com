@@ -1,5 +1,5 @@
 REMOTE_HOST="cloud"
-REMOTE_DIR="~/sites/datavizs23.classes/public_html"
+REMOTE_DIR="~/sites/datavizf23.classes/public_html"
 REMOTE_DEST=$REMOTE_HOST:$REMOTE_DIR
 
 echo "Uploading new changes to remote server..."

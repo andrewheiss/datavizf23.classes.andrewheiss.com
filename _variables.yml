@@ -19,10 +19,10 @@ course:
   time: "Asynchronous"
   location: "Anywhere"
   dates: "June 5–July 30, 2023"
-  github: "https://www.github.com/andrewheiss/datavizs23.classes.andrewheiss.com"
-  url: "https://datavizs23.classes.andrewheiss.com"
+  github: "https://www.github.com/andrewheiss/datavizf23.classes.andrewheiss.com"
+  url: "https://datavizf23.classes.andrewheiss.com"
   copyright_year: "2023"
-  slack: "https://gsudatavizs2023.slack.com"
+  slack: "https://gsudatavizf2023.slack.com"
 
 university:
   name: Georgia State University

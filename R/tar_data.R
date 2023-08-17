@@ -141,7 +141,7 @@ save_data <- list(
     format = "file"),
   
   # Data via BLS and collected/processed here
-  # https://datavizs23.classes.andrewheiss.com/exercise/08-exercise.html#postscript-how-i-got-this-unemployment-data
+  # https://datavizf23.classes.andrewheiss.com/exercise/08-exercise.html#postscript-how-i-got-this-unemployment-data
   tar_target(copy_unemployment,
     copy_file(here_rel("files", "data", "external_data", "unemployment.csv"),
       new_folder = here_rel("projects", "08-exercise", "data")),
