@@ -13,6 +13,8 @@ Put your reflection here
 
 Duncan Greere has collected a database of 48 Soviet dogs who flew as test subjects in USSR's space program in the 1950s and 60s. [The original data can be found here](https://airtable.com/universe/expG3z2CFykG1dZsp/sovet-space-dogs).
 
+For this assignment, you're going to forget all the wonderful CRAP design principles you just learned and try your hardest to **make the ugliest plot in the world**. Modify the color scale and change theme elements to make this plot truly hideous.
+
 ## Load and clean data
 
 First we load and clean the data.

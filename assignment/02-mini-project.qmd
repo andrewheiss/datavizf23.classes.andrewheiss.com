@@ -16,7 +16,7 @@ options(dplyr.summarise.inform = FALSE)
 knitr::include_graphics("/files/img/assignments/refugees_welcome.jpg", error = FALSE)
 ```
 
-In this mini project, you will use **R, ggplot, and [Illustrator](https://www.adobe.com/products/illustrator.html), [Inkscape](https://inkscape.org/en/), or [Gravit Designer](https://www.designer.io/)** to explore where these refugees have come from.
+In this mini project, you will use **R, ggplot, and a [vector editing program](/resource/graphics-editors.qmd)** to explore where these refugees have come from.
 
 
 ## Instructions
@@ -57,7 +57,7 @@ Here's what you need to do:
    ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)
    ```
 
-9. **Refine and polish** the saved PDF in [Illustrator](https://www.adobe.com/products/illustrator.html) or [Inkscape](https://inkscape.org/en/) or [Gravit Designer](https://www.designer.io/), adding annotations, changing colors, and otherwise enhancing it.
+9. **Refine and polish** the saved PDF in a [vector editing program](/resource/graphics-editors.qmd), adding annotations, changing colors, and otherwise enhancing it.
 
 10. **Export** the polished image as a PDF and a PNG file.
 
@@ -77,7 +77,7 @@ You will be graded based on completion using the standard ✓ system, but I'll p
 
 - [{{< fa file-pdf >}} `mini-project-2-rubric.pdf`](/files/projects/mini-project-2-rubric.pdf)
 
-For this assignment, I am less concerned with the code (that's why I gave most of it to you), and more concerned with the *design*. Choose good colors based on palettes. Choose good, clean fonts. Use the heck out of `theme()`. Add informative design elements in Illustrator/Inkscape/Gravit Designer. Make it look beautiful and CRAPpy. Refer to [the design resources here](/resource/design.qmd).
+For this assignment, I am less concerned with the code (that's why I gave most of it to you), and more concerned with the *design*. Choose good colors based on palettes. Choose good, clean fonts. Use the heck out of `theme()`. Add informative design elements in Illustrator/Inkscape/Affinity Designer. Make it look beautiful and CRAPpy. Refer to [the design resources here](/resource/design.qmd).
 
 **Please seek out help when you need it!** You know enough R (and have enough examples of code from class and your readings) to be able to do this. Your project has to be turned in individually, and your visualization should be your own (i.e. if you work with others, don't all turn in the same graph), but you should work with others! Reach out to me for help too—I'm here to help!
 

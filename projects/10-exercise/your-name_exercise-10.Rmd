@@ -28,3 +28,10 @@ Do the following:
 3. Make sure the hovering tooltip is more informative than the default.
 
 Good luck and have fun!
+
+
+# Task 3:
+
+Install the {flexdashboard} package and create a new R Markdown file in your project by going to File > New File… > R Markdown… > From Template > Flexdashboard.
+
+Using [the documentation for {flexdashboard} online](https://pkgs.rstudio.com/flexdashboard/articles/using.html), create a basic dashboard that shows a plot (static or interactive) in at least three chart areas. Play with the layout if you're feeling brave.

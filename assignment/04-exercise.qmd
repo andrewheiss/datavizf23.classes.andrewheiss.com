@@ -7,67 +7,47 @@ date: "2023-09-18"
 knitr::opts_chunk$set(fig.align = "center")
 ```
 
-## Getting started
-
 The New York City Department of Buildings (DOB) maintains a list of construction sites that have been categorized as "essential" during the city's shelter-in-place pandemic order. They've provided [an interactive map here](https://www1.nyc.gov/assets/buildings/html/essential-active-construction.html) where you can see the different projects. There's also a link there to download the complete dataset. 
 
 For this exercise, you're going to use this data to visualize the amounts or proportions of different types of essential projects in the five boroughs of New York City (Brooklyn, Manhattan, the Bronx, Queens, and Staten Island). 
 
-You'll be doing all your R work in R Markdown this time (and from now on). You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+- [{{< fa laptop-code >}} Amounts and proportions](/example/04-example.qmd)
 
-You'll need to download one CSV file and put it somewhere on your computer or upload it to Posit.cloud—preferably in a folder named `data` in your project folder. You can download the data from [the DOB's map](https://www1.nyc.gov/assets/buildings/html/essential-active-construction.html), or use this link to get it directly:
-
-- [{{< fa file-csv >}} `EssentialConstruction.csv`](/files/data/external_data/EssentialConstruction.csv)
-
-To help you, I've created a skeleton R Markdown file with a template for this exercise, along with some code to help you clean and summarize the data. Download that here and include it in your project:
-
-- [{{< fa brands r-project >}} `04-exercise.Rmd`](/projects/04-exercise/04-exercise.Rmd)
-
-In the end, the structure of your project directory should look something like this:
-
-```default
-your-project-name\
-  04-exercise.Rmd
-  your-project-name.Rproj
-  data\
-    EssentialConstruction.csv
-```
-
-To check that you put everything in the right places, you can download and unzip this file, which contains everything in the correct structure:
+You'll be doing all your R work in R Markdown this time (and from now on). You can download a zipped file of a pre-made project here:
 
 - [{{< fa file-archive >}} `04-exercise.zip`](/projects/04-exercise.zip)
 
+You don't need to make your plots super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing fill colors with `scale_fill_manual()` or with viridis palettes. 
 
-## Task 1: Reflection
-
-Write your reflection for the day's readings.
+And as always, if you're struggling, *please* talk to me and use Slack and talk to your classmates! Don't suffer in silence!
 
 
-## Task 2: Essential pandemic construction
+## Instructions
 
-Make the following plots and briefly explain what they show:
+1. If you're using R on your own computer, download this file, [*unzip it*](/resource/unzipping.qmd), and double click on the file named `exercise-4.Rproj`: [{{< fa file-archive >}} `04-exercise.zip`](/projects/04-exercise.zip)
 
-- Show the count or proportion of approved projects by borough using a bar chart
+   You'll need to make sure you have the `tidyverse` package installed on your computer. If you try to load it with `library(tidyverse)` and R gives an error that the package is missing, use the "Packages" panel in RStudio to install it.
 
-- Show the count or proportion of approved projects by category using a lollipop chart
+   (Alternatively, you can open the project named "Exercise 4" on Posit.cloud and complete the assignment in your browser without needing to install anything. [This link should take you to the project](https://posit.cloud/spaces/401677/content/6336974)—if it doesn't, log in and look for the project named "Exercise 4".)
 
-- Show the proportion of approved projects by borough and category simultaneously using a heatmap
+2. Rename the R Markdown file named `your-name_exercise-4.Rmd` to something that matches your name and open it in RStudio.
 
-[The example for this week's session](/example/04-example.qmd) will be *incredibly* helpful for this exercise. Reference it.
+3. Complete the tasks given in the R Markdown file. 
 
-You don't need to make these super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing fill colors with `scale_fill_manual()` or with viridis palettes. 
+   Fill out code in the empty chunks provided (you can definitely copy, paste, and adapt from other code in the document or [the example page](/example/04-example.qmd)—don't try to write everything from scratch!).
 
-You'll need to insert your own code chunks where needed. Rather than typing them by hand (that's tedious and you might miscount the number of backticks!), use the "Insert" button at the top of the editing window, or type <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>i</kbd> on Windows, or <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>i</kbd> on macOS.
+   You'll need to insert your own code chunks. Rather than typing them by hand (that's tedious!), use the "Insert" button at the top of the editing window, or press  <kbd>⌥</kbd> + <kbd>⌘</kbd> + <kbd>I</kbd> on macOS, or <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>I</kbd> on Windows.
 
-```{r insert-chunk-button, echo=FALSE, out.width="19%"}
+```{r insert-chunk-button, echo=FALSE, out.width="19%", indent="   ", fig.align="center"}
 knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error = FALSE)
 ```
 
+   Remember that you can run an entire chunk by clicking on the green play arrow in the top right corner of the chunk. You can also run lines of code line-by-line if you place your cursor on some R code and press <kbd>⌘</kbd> + <kbd>enter</kbd> (for macOS users) or <kbd>ctrl</kbd> + <kbd>enter</kbd> (for Windows users).
 
-## Turning everything in
+   Make sure you run each chunk sequentially. If you run a chunk in the middle of the document without running previous ones, it might not work, since previous chunks might do things that later chunks depend on.
 
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
+1. When you're all done, click on the "Knit" button at the top of the editing window and create a Word or PDF version (if you've [installed **tinytex**](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege. **Do not upload a knitted HTML file** (they don't work on iCollege).
 
-```{r knit-button, echo=FALSE, out.width="30%"}
+```{r knit-button, echo=FALSE, out.width="30%", indent="   ", fig.align="center"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)
 ```

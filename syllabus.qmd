@@ -103,9 +103,9 @@ You can [find instructions for installing R, RStudio, and all the tidyverse pack
 
 Data science and statistical programming can be difficult. Computers are stupid and little errors in your code can cause hours of headache (even if you've been doing this stuff for years!).
 
-Fortunately there are tons of online resources to help you with this. Two of the most important are [StackOverflow](https://stackoverflow.com/) (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [RStudio Community](https://community.rstudio.com/) (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)).
+Fortunately there are tons of online resources to help you with this. Two of the most important are [StackOverflow](https://stackoverflow.com/) (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [Posit Community](https://community.rstudio.com/) (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)).
 
-If you use Twitter, post R-related questions and content with [#rstats](https://twitter.com/search?q=%23rstats). The community there is exceptionally generous and helpful.
+If you use Mastodon or Twitter, post R-related questions and content with [#rstats](https://twitter.com/search?q=%23rstats). The community there is exceptionally generous and helpful.
 
 [ChatGPT](https://chat.openai.com/) is generally relatively okay with R questions, but it will often hallucinate responses—it really likes to imagine packages that don't exist and then give you answers with them. Think of it as glorified autocomplete. [I'd encourage you to read the first few paragraphs here](https://www.infoworld.com/article/3694611/8-chatgpt-tools-for-r-programming.html) about a few important things to keep in mind when using ChatGPT, though.
 
@@ -120,7 +120,7 @@ We have no regularly scheduled meeting times.
 
 Instead, 100% of the class content is asynchronous. You can do the readings and watch the videos on your own schedule at whatever time works best for you. Many of you work full time and you have childcare and parental care responsibilities, leaving you with only evenings for coursework. I've designed this asynchronous system with *you specifically* in mind. I also can only really do teaching work at night when my kids are in bed—I recorded all these videos between like 10 PM and 2 AM. We're all in similar pandemic boats.
 
-Each session has (1) a set of readings and an accompanying lecture, (2) a lesson, (3) an example with lots of reference code, and (4) a short assignment. The [schedule page](/schedule.qmd) provides an overview of all these moving parts.
+Each week has (1) a set of readings and an accompanying lecture, (2) a lesson, (3) an example with lots of reference code, and (4) a short assignment. The [schedule page](/schedule.qmd) provides an overview of all these moving parts.
 
 I recommend following this general process for each session:
 
@@ -149,7 +149,7 @@ Please watch this video: <small>(*this is not me, btw—this is a different Andr
 
 Student hours are set times dedicated to all of you (most professors call these "office hours"; I don't^[There's fairly widespread misunderstanding about what office hours actually are! [Many students often think that they are the times I *shouldn't* be disturbed](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/), which is the exact opposite of what they're for!]). This means that I will be ~~in my office~~ at home (wistfully) waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
 
-Because of the pandemic, we cannot meet in person. I can meet you online via Webex. [Make an appointment with me here](https://calendly.com/andrewheiss/)—the confirmation e-mail will contain a link for a Webex meeting. You can also find me through e-mail and Slack.
+Because of the pandemic, I am not on campus often and generally cannot meet in person. I will generally try to be on campus at least once a week though (typically on Mondays), and I can always meet you online via Webex. [Make an appointment with me here](https://calendly.com/andrewheiss/). You can choose an online or in-person slot—if you choose an online slot, the confirmation e-mail will contain a link for a Webex meeting. You can also find me through e-mail and Slack.
 
 ### Learning during a pandemic
 
@@ -171,7 +171,7 @@ I want you to learn lots of things from this class (Graphic design! Fancy charts
 
 ### Late work
 
-With the exception of the mini projects and the final project, **there's no penalty for late work.** There's no such thing as late work. I would **highly recommend** staying caught up as much as possible, but if you need to turn something in late, that's fine—there's **no penalty**. I might not be able to give you good feedback if you turn something in late, but that's really the only practical penalty—there's no harm to your grade.
+With the exception of the mini projects and the final project, **there's no penalty for late work.** I would ***highly recommend*** staying caught up as much as possible, but if you need to turn something in late, that's fine. I might not be able to give you good feedback if you turn something in late, but that's really the only practical penalty—there's no harm to your grade.
 
 
 ### Counseling and Psychological Services (CPS)

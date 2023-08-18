@@ -3,7 +3,8 @@
 
 # Data Visualization with R <a href='https://econf23.classes.andrewheiss.com/'><img src='files/favicon-512.png' align="right" height="139" /></a>
 
-[PMAP 8551/4551 • Fall 2023](https://datavizf23.classes.andrewheiss.com/)  
+[PMAP 8551/4551 • Fall
+2023](https://datavizf23.classes.andrewheiss.com/)  
 [Andrew Heiss](https://www.andrewheiss.com/) • Andrew Young School of
 Policy Studies • Georgia State University
 

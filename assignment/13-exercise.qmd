@@ -7,65 +7,47 @@ date: "2023-11-27"
 knitr::opts_chunk$set(fig.align = "center")
 ```
 
-## Getting started
-
 For this exercise, you'll download some books from Project Gutenberg and visualize patterns in the words.
 
-You should use an RStudio Project to keep your files well organized (either on your computer or on Posit.cloud). Either create a new project for this exercise only, or make a project for all your work in this class.
+This example page will be incredibly useful for you:
 
-**To help you**, I've created a skeleton R Markdown file with a template for this exercise, along with some helpful starter code. Download that here and include it in your project:
+- [{{< fa laptop-code >}} Text](/example/13-example.qmd)
 
-- [{{< fa brands r-project >}} `13-exercise.Rmd`](/projects/13-exercise/13-exercise.Rmd)
-
-In the end, the structure of your project directory should look something like this:
-
-```default
-your-project-name\
-  13-exercise.Rmd
-  your-project-name.Rproj
-```
-
-To check that you put everything in the right places, you can download and unzip this file, which contains everything in the correct structure:
+You'll be doing all your R work in R Markdown. You can download a zipped file of a pre-made project here:
 
 - [{{< fa file-archive >}} `13-exercise.zip`](/projects/13-exercise.zip)
 
-The [example from this week's session](/example/13-example.qmd) will be incredibly helpful for this exercise.
+You don't need to make your plots super fancy (except for these annotations), but you should play around with the plots and try to go beyond the basics—experiment with changing colors or modifying themes and theme elements.
 
-This can be as simple or as complex as you want. You don't need to make your plots super fancy, but if you're feeling brave, experiment with changing colors or modifying themes and theme elements.
+And as always, if you're struggling, *please* talk to me and use Slack and talk to your classmates! Don't suffer in silence!
 
-You'll need to insert your own code chunks where needed. Rather than typing them by hand (that's tedious and you might miscount the number of backticks!), use the "Insert" button at the top of the editing window, or type <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>i</kbd> on Windows, or <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>i</kbd> on macOS.
 
-```{r insert-chunk-button, echo=FALSE, out.width="19%"}
+## Instructions
+
+1. If you're using R on your own computer, download this file, [*unzip it*](/resource/unzipping.qmd), and double click on the file named `exercise-13.Rproj`: [{{< fa file-archive >}} `13-exercise.zip`](/projects/13-exercise.zip)
+
+   You'll need to make sure you have these packages installed on your computer: `tidyverse`, `tidytext`, `gutenbergr`. If you try to load one of those packages with `library(tidyverse)` or `library(tidytext)`, etc., and R gives an error that the package is missing, use the "Packages" panel in RStudio to install it.
+
+   (Alternatively, you can open the project named "Exercise 13" on Posit.cloud and complete the assignment in your browser without needing to install anything. [This link should take you to the project](https://posit.cloud/spaces/401677/content/6337017)—if it doesn't, log in and look for the project named "Exercise 13".)
+
+2. Rename the R Markdown file named `your-name_exercise-13.Rmd` to something that matches your name and open it in RStudio.
+
+3. Complete the tasks given in the R Markdown file. 
+
+   Fill out code in the empty chunks provided (you can definitely copy, paste, and adapt from other code in the document or [the example page](/example/13-example.qmd)—don't try to write everything from scratch!).
+
+   You'll need to insert your own code chunks. Rather than typing them by hand (that's tedious!), use the "Insert" button at the top of the editing window, or press  <kbd>⌥</kbd> + <kbd>⌘</kbd> + <kbd>I</kbd> on macOS, or <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>I</kbd> on Windows.
+
+```{r insert-chunk-button, echo=FALSE, out.width="19%", indent="   ", fig.align="center"}
 knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error = FALSE)
 ```
 
+   Remember that you can run an entire chunk by clicking on the green play arrow in the top right corner of the chunk. You can also run lines of code line-by-line if you place your cursor on some R code and press <kbd>⌘</kbd> + <kbd>enter</kbd> (for macOS users) or <kbd>ctrl</kbd> + <kbd>enter</kbd> (for Windows users).
 
-## Task 1: Reflection
+   Make sure you run each chunk sequentially. If you run a chunk in the middle of the document without running previous ones, it might not work, since previous chunks might do things that later chunks depend on.
 
-Write your reflection for the day's readings.
+1. When you're all done, click on the "Knit" button at the top of the editing window and create a Word or PDF version (if you've [installed **tinytex**](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege. **Do not upload a knitted HTML file** (they don't work on iCollege).
 
-
-## Task 2: Word frequencies
-
-Use the {gutenbergr} package to download 4+ books by some author on [Project Gutenberg](http://www.gutenberg.org/). Jane Austen, Victor Hugo, Emily Brontë, Lucy Maud Montgomery, Arthur Conan Doyle, Mark Twain, Henry David Thoreau, Fyodor Dostoyevsky, Leo Tolstoy. Anyone. Just make sure it's all from the same author. [The example page](/example/13-example.qmd) shows how to do that.
-
-Alternatively, you can try using text from a source other than Project Gutenberg. Check out, for instance, [{harrypotter}](https://github.com/bradleyboehmke/harrypotter) (the full text of all 7 Harry Potter books), [{quRan}](https://github.com/andrewheiss/quRan) (the full text of the Qur'an; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)), or [{scriptuRs}](https://github.com/andrewheiss/scriptuRs) (the full text of the King James Version of the Bible; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)).
-
-**Make these two plots and describe what each tell about your author's books:** (you'll probably want to facet by book)
-
-1. Top 10 most frequent words *in each book*
-2. Top 10 most unique words *in each book* (i.e. tf-idf)
-
-
-## 100% optional bonus fun tasks
-
-If you want, do some other things with the text you've downloaded. Make a "he verbs vs. she verbs" plot. Tag the parts of speech and find the most common verbs or nouns. Try some sentiment analysis. Do something fun.
-
-
-## Turning everything in
-
-When you're all done, click on the "Knit" button at the top of the editing window and create an HTML or Word version (or PDF if you've [installed {tinytex}](/resource/install.qmd#install-tinytex)) of your document. Upload that file to iCollege.
-
-```{r knit-button, echo=FALSE, out.width="30%"}
+```{r knit-button, echo=FALSE, out.width="30%", indent="   ", fig.align="center"}
 knitr::include_graphics("/files/img/assignments/knit-button.png", error = FALSE)
 ```

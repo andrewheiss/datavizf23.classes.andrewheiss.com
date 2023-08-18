@@ -11,9 +11,9 @@ Put your reflection here
 
 # Task 2: Enhanced plot
 
-When you knit this document, you will create and save a basic bar chart of hot dog eating contest winners. You will then open the resulting file in Illustrator or Gravit Designer. Open the PDF in Illustrator; open the SVG in Gravit Designer.
+When you knit this document, you will create and save a basic bar chart of hot dog eating contest winners. You will then open the resulting file in a [vector editing program](https://datavizf23.classes.andrewheiss.com/resource/graphics-editors.html).
 
-Be sure that you save your file in Illustrator or Gravit Designer **with a different name**. You don't want to accidentally overwrite all your enhancements and updates when you knit this document. That would be so sad.
+Be sure that you save your file **with a different name**. You don't want to accidentally overwrite all your enhancements and updates when you knit this document. That would be so sad.
 
 ```{r make-and-save-hot-dog-plot}
 library(tidyverse)
@@ -38,9 +38,9 @@ plot_hotdogs <- ggplot(hotdogs,
   theme_minimal() +
   theme(panel.background = element_rect(fill = "transparent", colour = NA),
         plot.background = element_rect(fill = "transparent", colour = NA),
-        axis.ticks.x = element_line(size = 0.25),
+        axis.ticks.x = element_line(linewidth = 0.25),
         panel.grid.major.x = element_blank(),
-        panel.grid.major.y = element_line(size = 0.5, linetype = "dashed"),
+        panel.grid.major.y = element_line(linewidth = 0.5, linetype = "dashed"),
         panel.grid.minor = element_blank())
 
 # Change the dimensions here if you want

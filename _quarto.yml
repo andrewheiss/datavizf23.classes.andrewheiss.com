@@ -250,6 +250,7 @@ website:
           contents:
             - resource/index.qmd
             - resource/design.qmd
+            - resource/graphics-editors.qmd
             - resource/visualization.qmd
             - resource/r.qmd
             - resource/style.qmd

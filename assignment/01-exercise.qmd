@@ -7,6 +7,12 @@ date: "2023-08-28"
 knitr::opts_chunk$set(fig.align = "center")
 ```
 
+::: {.callout-important}
+
+Before starting this exercise, make sure you complete everything at [the lesson for this week](/lesson/01-lesson.qmd), especially the Posit Primers.
+:::
+
+
 ## Task 1: Make an RStudio Project
 
 1. Use either Posit.cloud or RStudio on your computer (preferably RStudio on your computer! [Follow these instructions to get started!](/resource/install.qmd)) to create a new RStudio Project.
@@ -32,15 +38,22 @@ knitr::opts_chunk$set(fig.align = "center")
    Replace this text with your reflection
    
    
-   # My first plot
-   
-   ```{{r load-libraries-data, warning=FALSE, message=FALSE}}
-   library(tidyverse)
-   
-   cars <- read_csv("data/cars.csv")
-   ```
-   
-   Replace this line with a code chunk and use it to create a plot.
+   # My first plots
+
+   Insert a chunk below and use it to create a scatterplot (hint: `geom_point()`) with diplacement (`displ`) on the x-axis, city MPG (`cty`) on the y-axis, and with the points colored by drive (`drv`).
+
+   PUT CHUNK HERE
+
+   Insert a chunk below and use it to create a histogram (hint: `geom_histogram()`) with highway MPG (`hwy`) on the x-axis. Do not include anything on the y-axis (`geom_histogram()` will do that automatically for you). Choose an appropriate bin width. If you're brave, facet by drive (`drv`).
+
+   PUT CHUNK HERE
+
+
+   # My first data manipulation
+
+   Insert a chunk below and use it to calculate the average city MPG (`cty`) by class of car (`class`). This won't be a plot---it'll be a table. Hint: use a combination of `group_by()` and `summarize()`.
+
+   PUT CHUNK HERE
    ````
 
 6. Save the R Markdown file with some sort of name (**without any spaces!**)
@@ -52,17 +65,17 @@ knitr::include_graphics("/files/img/assignments/project-structure.png", error = 
 ```
 
 
-## Task 2: Make an R Markdown file with a plot in it
+## Task 2: Work with R
 
 1. Add your reading reflection to the appropriate place in the R Markdown file. You can type directly in RStudio if you want (though there's no spell checker), or you can type it in Word or Google Docs and then paste it into RStudio.
 
-2. Remove the text that says "Replace this line with a code chunk" and insert a new R code chunk. Either type <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>i</kbd> on Windows, or <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>i</kbd> on macOS, or use the "Insert Chunk" menu:
+2. Remove the text that says "PUT CHUNK HERE" and insert a new R code chunk. Either type <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>i</kbd> on Windows, or <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>i</kbd> on macOS, or use the "Insert Chunk" menu:
 
 ```{r insert-chunk-button, echo=FALSE, out.width="19%", indent="   "}
 knitr::include_graphics("/files/img/assignments/insert-chunk-button.png", error = FALSE)
 ```
 
-3. Use `ggplot()` to create a scatterplot using the `cars` dataset. Use whatever variables you want. Type the code to create the plot in the new empty chunk.
+3. Follow the instructions for the three chunks of code.
 
 4. Knit your document as a Word file (or PDF if you're brave and [installed LaTeX](/resource/install.qmd#install-tinytex)). Use the "Knit" menu:
 

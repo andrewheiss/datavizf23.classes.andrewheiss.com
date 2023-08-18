@@ -46,6 +46,10 @@ Make a map showing the proportion of individuals in each country that had access
 
 # Task 3: Personal map
 
+Draw your own map with your own points. This could be a map of places you've lived, or a map of places you've visited, or a map of places you want to visit. Anything!
+
+The only requirement is that you find an appropriate shapefile (states, counties, world, etc.), collect latitude and longitude data from Google Maps, and plot the points (with or without labels) on a map. Use multiple shapefiles if you want—add roads, rivers, lakes, whatever. Basically follow the code from the example in the section named ["Making your own geocoded data"](https://datavizf23.classes.andrewheiss.com/example/12-example.html#making-your-own-geocoded-data).
+
 ```{r personal-map}
 # TODO: Make a map
 ```

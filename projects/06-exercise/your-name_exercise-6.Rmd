@@ -38,6 +38,8 @@ Make a histogram of *logged* GDP per capita for 1997 only, across all five conti
 
 Make a ridge plot of life expectancy over time, from 1952 to 2007. You'll need to use the full gapminder data, not the 1997-only data.
 
+Tip! `year` will be on the y-axis, but it must be a categorical variable to work with {ggridges}, so you'll either need to wrap it in `as.factor()` like `aes(..., y = as.factor(year))`, or add a new categorical/factor year column to the gapminder dataset with `mutate()`.
+
 ```{r plot-ridgeplot}
 # Add a ridge plot here
 ```
