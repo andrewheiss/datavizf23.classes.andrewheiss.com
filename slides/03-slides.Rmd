@@ -346,8 +346,8 @@ ggplot(data = troops,
                      color = direction,
                      linewidth = survivors)) +
   geom_path(lineend = "round", linejoin = "mitre") + 
-  scale_size_continuous(range = c(1, 20),
-                        labels = scales::comma) +
+  scale_linewidth_continuous(range = c(1, 20),
+                             labels = scales::comma) +
   theme_gray(base_size = 20)
 ```
 

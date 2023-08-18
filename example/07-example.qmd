@@ -408,7 +408,7 @@ Cool! Just looking at the data in the table, we can see that predicted temperatu
 ggplot(predicted_values, aes(x = windSpeed, y = .fitted)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high),
               fill = "#BF3984", alpha = 0.5) + 
-  geom_line(size = 1, color = "#BF3984") +
+  geom_line(linewidth = 1, color = "#BF3984") +
   labs(x = "Wind speed (MPH)", y = "Predicted high temperature (F)") +
   theme_minimal()
 ```
@@ -443,7 +443,7 @@ predicted_values_fancy <- augment(model_complex,
 ggplot(predicted_values_fancy, aes(x = windSpeed, y = .fitted)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high, fill = cloudCover_scaled),
               alpha = 0.5) + 
-  geom_line(aes(color = cloudCover_scaled), size = 1) +
+  geom_line(aes(color = cloudCover_scaled), linewidth = 1) +
   labs(x = "Wind speed (MPH)", y = "Predicted high temperature (F)") +
   theme_minimal() +
   guides(fill = "none", color = "none") +
@@ -508,7 +508,7 @@ We can then plot this really easily too:
 ggplot(predicted_values_easy, aes(x = windSpeed, y = estimate)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high),
               fill = "#BF3984", alpha = 0.5) + 
-  geom_line(size = 1, color = "#BF3984") +
+  geom_line(linewidth = 1, color = "#BF3984") +
   labs(x = "Wind speed (MPH)", y = "Predicted high temperature (F)") +
   theme_minimal()
 ```
@@ -526,7 +526,7 @@ predicted_values_fancy_easy <- predictions(
 ggplot(predicted_values_fancy_easy, aes(x = windSpeed, y = estimate)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high, fill = cloudCover_scaled),
               alpha = 0.5) + 
-  geom_line(aes(color = cloudCover_scaled), size = 1) +
+  geom_line(aes(color = cloudCover_scaled), linewidth = 1) +
   labs(x = "Wind speed (MPH)", y = "Predicted high temperature (F)") +
   theme_minimal() +
   guides(fill = "none", color = "none") +
@@ -541,7 +541,7 @@ If we're interested in the slopes (or marginal effects) of these lines, we can c
 ggplot(predicted_values_easy, aes(x = windSpeed, y = estimate)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high),
               fill = "#BF3984", alpha = 0.5) + 
-  geom_line(size = 1, color = "#BF3984") +
+  geom_line(linewidth = 1, color = "#BF3984") +
   labs(x = "Wind speed (MPH)", y = "Predicted high temperature (F)") +
   theme_minimal()
 ```
@@ -588,7 +588,7 @@ predicted_values_wild <- predictions(
 ggplot(predicted_values_wild, aes(x = windSpeed, y = estimate)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high, fill = cloudCover_scaled),
               alpha = 0.5) + 
-  geom_line(aes(color = cloudCover_scaled), size = 1) +
+  geom_line(aes(color = cloudCover_scaled), linewidth = 1) +
   labs(x = "Wind speed (MPH)", y = "Predicted high temperature (F)") +
   theme_minimal() +
   guides(fill = "none", color = "none") +
@@ -621,7 +621,7 @@ slopes_wild <- slopes(
 ggplot(slopes_wild, aes(x = windSpeed, y = estimate)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high, fill = cloudCover_scaled),
               alpha = 0.5) +
-  geom_line(aes(color = cloudCover_scaled), size = 1) +
+  geom_line(aes(color = cloudCover_scaled), linewidth = 1) +
   labs(x = "Wind speed (MPH)", y = "Slope (marginal effect) of wind speed",
        title = "Marginal effect of wind speed across levels of cloud cover",
        subtitle = "These are *slopes*, not predicted values") +

@@ -222,7 +222,7 @@ Because this a regular ggplot geom, all our regular aesthetics and themes and ev
 ```{r map-super-basic-filled}
 ggplot() + 
   geom_sf(data = world_sans_antarctica, 
-          fill = "#669438", color = "#32481B", size = 0.25) +
+          fill = "#669438", color = "#32481B", linewidth = 0.25) +
   theme_void()
 ```
 
@@ -232,7 +232,7 @@ The Natural Earth dataset happens to come with some columns with a coloring sche
 ggplot() + 
   geom_sf(data = world_sans_antarctica, 
           aes(fill = as.factor(MAPCOLOR7)),
-          color = "#401D16", size = 0.25) +
+          color = "#401D16", linewidth = 0.25) +
   scale_fill_viridis_d(option = "plasma") +
   guides(fill = "none") +
   theme_void()
@@ -247,7 +247,7 @@ Here's Robinson (yay):
 ```{r map-basic-robinson}
 ggplot() + 
   geom_sf(data = world_sans_antarctica, 
-          fill = "#669438", color = "#32481B", size = 0.25) +
+          fill = "#669438", color = "#32481B", linewidth = 0.25) +
   coord_sf(crs = st_crs("ESRI:54030")) +  # Robinson
   # Or use the name instead of the number
   # coord_sf(crs = "+proj=robin")
@@ -259,7 +259,7 @@ Here's sinusoidal:
 ```{r map-basic-sinusoidal}
 ggplot() + 
   geom_sf(data = world_sans_antarctica, 
-          fill = "#669438", color = "#32481B", size = 0.25) +
+          fill = "#669438", color = "#32481B", linewidth = 0.25) +
   coord_sf(crs = st_crs("ESRI:54008")) +  # Sinusoidal
   theme_void()
 ```
@@ -269,7 +269,7 @@ And here's Mercator (ewww):
 ```{r map-basic-mercator}
 ggplot() + 
   geom_sf(data = world_sans_antarctica, 
-          fill = "#669438", color = "#32481B", size = 0.25) +
+          fill = "#669438", color = "#32481B", linewidth = 0.25) +
   coord_sf(crs = st_crs("EPSG:3395")) +  # Mercator
   # Or use the name instead of the number
   # coord_sf(crs = "+proj=merc")
@@ -285,14 +285,14 @@ lower_48 <- us_states %>%
   filter(!(NAME %in% c("Alaska", "Hawaii", "Puerto Rico")))
 
 ggplot() + 
-  geom_sf(data = lower_48, fill = "#192DA1", color = "white", size = 0.25) +
+  geom_sf(data = lower_48, fill = "#192DA1", color = "white", linewidth = 0.25) +
   coord_sf(crs = st_crs("EPSG:4269")) +  # NAD83
   theme_void()
 ```
 
 ```{r us-albers}
 ggplot() + 
-  geom_sf(data = lower_48, fill = "#192DA1", color = "white", size = 0.25) +
+  geom_sf(data = lower_48, fill = "#192DA1", color = "white", linewidth = 0.25) +
   coord_sf(crs = st_crs("ESRI:102003")) +  # Albers
   theme_void()
 ```
@@ -393,7 +393,7 @@ Technically we can just draw the county boundaries instead of layer the state bo
 
 ```{r ga-counties-in-state}
 ggplot() +
-  geom_sf(data = only_georgia_high, color = "#EC8E55", size = 3) +
+  geom_sf(data = only_georgia_high, color = "#EC8E55", linewidth = 3) +
   geom_sf(data = ga_counties, fill = "#A5D46A", color = "white") +
   theme_void()
 ```
@@ -481,10 +481,10 @@ ga_lakes <- st_intersection(only_georgia_high, st_make_valid(lakes))
 
 ggplot() +
   geom_sf(data = only_georgia_high, 
-          color = "black", size = 0.1, fill = "black") +
-  geom_sf(data = ga_rivers_global, size = 0.3, color = "grey80") +
-  geom_sf(data = ga_rivers_na, size = 0.15, color = "grey80") +
-  geom_sf(data = ga_lakes, size = 0.3, fill = "grey80", color = NA) +
+          color = "black", linewidth = 0.1, fill = "black") +
+  geom_sf(data = ga_rivers_global, linewidth = 0.3, color = "grey80") +
+  geom_sf(data = ga_rivers_na, linewidth = 0.15, color = "grey80") +
+  geom_sf(data = ga_lakes, linewidth = 0.3, fill = "grey80", color = NA) +
   coord_sf(crs = st_crs("EPSG:4326")) +  # NAD83
   theme_void()
 ```
@@ -673,7 +673,7 @@ Let's plot these on a US map:
 
 ```{r plot-geocoded-cities}
 ggplot() + 
-  geom_sf(data = lower_48, fill = "#192DA1", color = "white", size = 0.25) +
+  geom_sf(data = lower_48, fill = "#192DA1", color = "white", linewidth = 0.25) +
   geom_sf(data = addresses_geometry, size = 5, color = "#FF851B") +
   # Albers uses meters as its unit of measurement, so we need to nudge these
   # labels up by a lot. I only settled on 175,000 here after a bunch of trial
@@ -743,7 +743,7 @@ Now that we have a column for life expectancy, we can map it to the fill aesthet
 ggplot() + 
   geom_sf(data = world_map_with_life_expectancy, 
           aes(fill = life_expectancy),
-          size = 0.25) +
+          linewidth = 0.25) +
   coord_sf(crs = st_crs("ESRI:54030")) +  # Robinson
   scale_fill_viridis_c(option = "viridis") +
   labs(fill = "Life expectancy") +
@@ -775,7 +775,7 @@ world_sans_antarctica_fixed <- world_sans_antarctica %>%
 ggplot() + 
   geom_sf(data = world_sans_antarctica_fixed, 
           aes(fill = life_expectancy),
-          size = 0.25) +
+          linewidth = 0.25) +
   coord_sf(crs = st_crs("ESRI:54030")) +  # Robinson
   scale_fill_viridis_c(option = "viridis") +
   labs(fill = "Life expectancy") +

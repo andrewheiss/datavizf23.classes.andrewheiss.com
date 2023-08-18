@@ -203,7 +203,7 @@ These were simple graphs and they're kind of helpful, but they're not incredibly
 
 ```{r gdp-better}
 ggplot(gdp_only, aes(x = date, y = price)) +
-  geom_line(color = "#0074D9", size = 1) +
+  geom_line(color = "#0074D9", linewidth = 1) +
   scale_y_continuous(labels = dollar) +
   labs(y = "Billions of 2012 dollars",
        x = NULL,
@@ -286,7 +286,7 @@ ggplot(gdp_only, aes(x = date, y = price)) +
   geom_rect(data = recessions, 
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.3) +
-  geom_line(color = "#0074D9", size = 1) +
+  geom_line(color = "#0074D9", linewidth = 1) +
   scale_y_continuous(labels = dollar) +
   labs(y = "Billions of 2012 dollars",
        x = NULL,
@@ -306,7 +306,7 @@ ggplot(unemployment_claims_only, aes(x = date, y = price)) +
   geom_rect(data = recessions, 
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.3) +
-  geom_line(color = "#FF4136", size = 0.5) +
+  geom_line(color = "#FF4136", linewidth = 0.5) +
   annotate(geom = "label", x = as.Date("2010-01-01"), y = 1000000, 
            label = "The Great Recession", size = 3, family = "Roboto Condensed") +
   annotate(geom = "label", x = as.Date("2020-01-01"), y = 6000000, 

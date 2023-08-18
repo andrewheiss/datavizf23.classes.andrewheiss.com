@@ -111,7 +111,7 @@ When working with density plots *in this class* you don't need to worry too much
 Do the following:
 
 1. Fill this density plot with <span style="color: #E16462">#E16462</span>
-2. Add a border (hint: `color`) using <span style="color: #9C3836">#9C3836</span>, with size = 1
+2. Add a border (hint: `color`) using <span style="color: #9C3836">#9C3836</span>, with linewidth = 1
 3. Change the bandwidth (hint: `bw`) to 0.5, then 1, then 10
 
 :::

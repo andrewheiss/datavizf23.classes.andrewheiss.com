@@ -305,7 +305,7 @@ refugee_map <- world_shapes %>%
   filter(ISO_A3 != "ATA")
 
 ggplot() + 
-  geom_sf(data = refugee_map, aes(fill = number), size = 0.25, color = "black") + 
+  geom_sf(data = refugee_map, aes(fill = number), linewidth = 0.25, color = "black") + 
   coord_sf(crs = st_crs("ESRI:54030"), datum = NA) +
   scale_fill_viridis_c(na.value = "white") +
   labs(title = "5. Refugees admitted to the US in 2015") +

@@ -124,7 +124,7 @@ Almost every other plot element fits into one of three categories: a rectangle, 
 
 ### Deal with borders and backgrounds with `element_rect()`
 
-Things like the plot background or the panel background or the legend background are rectangles and can be manipulated with `element_rect()`. If you want the legend box to be yellow with a thin black border, you would use `theme(legend.box.background = element_rect(fill = "yellow", color = "black", size = 1)`.
+Things like the plot background or the panel background or the legend background are rectangles and can be manipulated with `element_rect()`. If you want the legend box to be yellow with a thin black border, you would use `theme(legend.box.background = element_rect(fill = "yellow", color = "black", linewidth = 1)`.
 
 ::: {.callout-important}
 ### Your turn
@@ -132,7 +132,7 @@ Things like the plot background or the panel background or the legend background
 Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
 - Fill the plot background with <span style="color: #F2D8CE">#F2D8CE</span>
-- Fill the panel background with <span style="color: #608BA6">#608BA6</span>, and make the border <span style="color: #184759">#184759</span> with size = 5
+- Fill the panel background with <span style="color: #608BA6">#608BA6</span>, and make the border <span style="color: #184759">#184759</span> with linewidth = 5
 
 This will be a fairly ugly plot.
 
@@ -154,7 +154,7 @@ Things like the panel grid, tick marks, and axis lines are all lines and can be 
 
 Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
-- Make the major panel gridlines blue and dashed with size = 1
+- Make the major panel gridlines blue and dashed with linewidth = 1
 
 This will also be a fairly ugly plot.
 
@@ -308,6 +308,6 @@ ggplot(data = mpg,
     plot.title = element_text(hjust = 1, face = "bold"),
     plot.subtitle = element_text(hjust = 1),
     axis.ticks = element_blank(),
-    panel.border = element_rect(color = "pink", size = 5)
+    panel.border = element_rect(color = "pink", linewidth = 5)
   )
 ```

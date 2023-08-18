@@ -414,7 +414,7 @@ ggplot(gapminder_highlighted,
   geom_line() +
   scale_color_manual(values = c("grey70", 
                                 "red")) +
-  scale_size_manual(values = c(0.1, 0.5)) +
+  scale_linewidth_manual(values = c(0.1, 0.5)) +
   guides(color = "none", linewidth = "none") +
   theme_minimal()
 ```
