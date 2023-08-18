@@ -12,8 +12,8 @@ listing:
   sort-ui: true
   date-format: "dddd MMMM D, YYYY [at] h:mm A"
   feed: 
-    title: "Data Visualization (Fall PMAP 8101) News"
-    description: "Updates and FAQs for PMAP 8101 at Georgia State University, Fall 2023"
+    title: "Data Visualization (Fall PMAP 8551/4551) News"
+    description: "Updates and FAQs for PMAP 8551/4551 at Georgia State University, Fall 2023"
   categories: false
 page-layout: full
 sidebar: false
@@ -30,9 +30,6 @@ base_url <- yaml::read_yaml(here::here("_quarto.yml"))$website$`site-url`
 feed_name <- "news/index.xml"
 feed_url <- paste0(base_url, "/", feed_name)
 ```
-
-::: {#news-table}
-:::
 
 ::::: {.callout-tip}
 
@@ -53,3 +50,6 @@ You can use a feed reader like [Feedly](https://feedly.com/) or use an [RSS-to-e
 ::::
 
 :::::
+
+::: {#news-table}
+:::
