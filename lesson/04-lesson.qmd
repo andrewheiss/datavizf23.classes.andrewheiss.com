@@ -559,8 +559,8 @@ ggplot(gapminder_2007,
        aes(x = gdpPercap, y = lifeExp, 
            color = continent, shape = continent, size = pop)) +
   geom_point() +
-  scale_x_log10(labels = dollar) +
-  scale_size_continuous(labels = comma)
+  scale_x_log10(labels = label_dollar()) +
+  scale_size_continuous(labels = label_comma())
 ```
 
 [Check the documentation for {scales}](https://scales.r-lib.org/reference/index.html) for details about all the labelling functions it has, including dates, percentages, p-values, LaTeX math, etc.

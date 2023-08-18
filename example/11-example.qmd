@@ -204,7 +204,7 @@ These were simple graphs and they're kind of helpful, but they're not incredibly
 ```{r gdp-better}
 ggplot(gdp_only, aes(x = date, y = price)) +
   geom_line(color = "#0074D9", linewidth = 1) +
-  scale_y_continuous(labels = dollar) +
+  scale_y_continuous(labels = label_dollar()) +
   labs(y = "Billions of 2012 dollars",
        x = NULL,
        title = "US Gross Domestic Product",
@@ -287,7 +287,7 @@ ggplot(gdp_only, aes(x = date, y = price)) +
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.3) +
   geom_line(color = "#0074D9", linewidth = 1) +
-  scale_y_continuous(labels = dollar) +
+  scale_y_continuous(labels = label_dollar()) +
   labs(y = "Billions of 2012 dollars",
        x = NULL,
        title = "US Gross Domestic Product",
@@ -311,7 +311,7 @@ ggplot(unemployment_claims_only, aes(x = date, y = price)) +
            label = "The Great Recession", size = 3, family = "Roboto Condensed") +
   annotate(geom = "label", x = as.Date("2020-01-01"), y = 6000000, 
            label = "COVID-19", size = 3, family = "Roboto Condensed", hjust = 1) +
-  scale_y_continuous(labels = comma) +
+  scale_y_continuous(labels = label_comma()) +
   labs(y = "Initial unemployment claims",
        x = NULL,
        title = "Initial unemployment claims",
@@ -395,7 +395,7 @@ ggplot(retail_components,
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.3) +
   geom_line() + 
-  scale_y_continuous(labels = dollar) +
+  scale_y_continuous(labels = label_dollar()) +
   # ggplot needs to know that the main data is a yearmonth column so that it'll
   # deal with the recessions data correctly; without this, you'll get an error
   scale_x_yearmonth() +
@@ -415,7 +415,7 @@ ggplot(retail_components,
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.3) +
   geom_line() + 
-  scale_y_continuous(labels = dollar) +
+  scale_y_continuous(labels = label_dollar()) +
   scale_x_yearmonth() +
   labs(x = NULL, y = "Trend, millions of dollars",
        title = "Seasonally adjusted trends in retail sales",
@@ -455,7 +455,7 @@ ggplot(retail_components_tidy,
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.3) +
   geom_line() + 
-  scale_y_continuous(labels = dollar) +
+  scale_y_continuous(labels = label_dollar()) +
   scale_x_yearmonth() +
   labs(x = NULL, y = "Millions of dollars",
        title = "Decomposed US Advance Retail Sales",

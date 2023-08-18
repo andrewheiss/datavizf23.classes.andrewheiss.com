@@ -70,15 +70,15 @@ First we need to make a regular static plot with ggplot:
 wdi_2019 <- wdi_clean %>% 
   filter(year == 2019) %>% 
   drop_na(prop_women_parl) %>% 
-  # Scale this down from 0-100 to 0-1 so that scales::percent() can format it as
-  # an actual percent
+  # Scale this down from 0-100 to 0-1 so that scales::label_percent() can format
+  # it as an actual percent
   mutate(prop_women_parl = prop_women_parl / 100)
 
 static_plot <- ggplot(wdi_2019, 
                       aes(y = fct_rev(region), x = prop_women_parl, color = region)) +
   geom_point(position = position_jitter(width = 0, height = 0.15, seed = 1234)) +
   guides(color = "none") +
-  scale_x_continuous(labels = percent) +
+  scale_x_continuous(labels = label_percent()) +
   # I used https://medialab.github.io/iwanthue/ to generate these colors
   scale_color_manual(values = c("#425300", "#e680ff", "#01bd71", "#ff3aad",
                                 "#9f3e00", "#0146bf", "#671d56")) +
@@ -110,7 +110,7 @@ static_plot_toolip <- ggplot(wdi_2019,
   geom_point(aes(text = country),
              position = position_jitter(width = 0, height = 0.15, seed = 1234)) +
   guides(color = "none") +
-  scale_x_continuous(labels = percent) +
+  scale_x_continuous(labels = label_percent()) +
   # I used https://medialab.github.io/iwanthue/ to generate these colors
   scale_color_manual(values = c("#425300", "#e680ff", "#01bd71", "#ff3aad",
                                 "#9f3e00", "#0146bf", "#671d56")) +
@@ -142,17 +142,17 @@ Let's add a new column with `mutate()`. A couple things to note here:
 
 - The `<br>` is HTML code for a line break
 
-- We use the `percent()` function to format numbers as percents. The `accuracy` argument tells R how many decimal points to use. If we used `1`, it would say 12%; if we used `0.01`, it would say 12.08%; etc.
+- We use the `label_percent()` function to format numbers as percents. The `accuracy` argument tells R how many decimal points to use. If we used `1`, it would say 12%; if we used `0.01`, it would say 12.08%; etc.
 
 ```{r nicer-tooltip}
 wdi_2019 <- wdi_clean %>% 
   filter(year == 2019) %>% 
   drop_na(prop_women_parl) %>% 
-  # Scale this down from 0-100 to 0-1 so that scales::percent() can format it as
-  # an actual percent
+  # Scale this down from 0-100 to 0-1 so that scales::label_percent() can format
+  # it as an actual percent
   mutate(prop_women_parl = prop_women_parl / 100) %>% 
   mutate(fancy_label = paste0(country, "<br>", 
-                              percent(prop_women_parl, accuracy = 0.1), 
+                              label_percent(accuracy = 0.1)(prop_women_parl), 
                               " women in parliament"))
 ```
 
@@ -172,7 +172,7 @@ static_plot_toolip_fancy <- ggplot(wdi_2019,
   geom_point(aes(text = fancy_label),
              position = position_jitter(width = 0, height = 0.15, seed = 1234)) +
   guides(color = "none") +
-  scale_x_continuous(labels = percent) +
+  scale_x_continuous(labels = label_percent()) +
   # I used https://medialab.github.io/iwanthue/ to generate these colors
   scale_color_manual(values = c("#425300", "#e680ff", "#01bd71", "#ff3aad",
                                 "#9f3e00", "#0146bf", "#671d56")) +

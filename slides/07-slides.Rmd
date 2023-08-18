@@ -215,7 +215,7 @@ ggplot(car_counts,
   scale_y_continuous(
     sec.axis = sec_axis(
       trans = ~ . / total_cars,
-      labels = scales::percent)
+      labels = scales::label_percent())
   ) +
   guides(fill = "none")
 ```

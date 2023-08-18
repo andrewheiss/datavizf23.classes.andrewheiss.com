@@ -219,7 +219,7 @@ assignments <- tribble(
   200     , "Final project"
 ) %>%
   mutate(Percent = Points / sum(Points),
-         Percent = scales::percent(Percent, accuracy = 1))
+         Percent = scales::label_percent(accuracy = 1)(Percent))
 
 grading <- tribble(
   ~Grade, ~Range,  ~Grade1, ~Range1,

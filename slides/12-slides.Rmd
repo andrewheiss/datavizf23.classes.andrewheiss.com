@@ -816,7 +816,7 @@ ggplot() +
           aes(fill = POP_EST),
           color = "white", linewidth = 0.15) +
   coord_sf(crs = "+proj=robin") +
-  scale_fill_gradient(labels = scales::comma) +
+  scale_fill_gradient(labels = scales::label_comma()) +
   labs(fill = NULL) +
   theme_void() +
   theme(legend.position = "bottom")

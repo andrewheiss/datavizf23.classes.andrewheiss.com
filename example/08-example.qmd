@@ -44,7 +44,7 @@ First, we load the libraries we'll be using:
 library(tidyverse)  # For ggplot, dplyr, and friends
 library(WDI)        # For getting data from the World Bank
 library(geofacet)   # For map-shaped facets
-library(scales)     # For helpful scale functions like dollar()
+library(scales)     # For helpful scale functions like label_dollar()
 library(ggrepel)    # For non-overlapping labels
 ```
 
@@ -224,8 +224,8 @@ gdp_south_asia <- wdi_clean %>%
   # Make some nice label columns
   # If the year is 1995, format it like "Country name: $GDP". If the year is
   # 2015, format it like "$GDP"
-  mutate(label_first = ifelse(year == 1995, paste0(country, ": ", dollar(round(gdp_per_cap))), NA),
-         label_last = ifelse(year == 2015, dollar(round(gdp_per_cap, 0)), NA))
+  mutate(label_first = ifelse(year == 1995, paste0(country, ": ", label_dollar()(round(gdp_per_cap))), NA),
+         label_last = ifelse(year == 2015, label_dollar()(round(gdp_per_cap, 0)), NA))
 ```
 
 With the data filtered like this, we can plot it by mapping year to the x-axis, GDP per capita to the y-axis, and coloring by country. To make the lines go across the two categorical labels in the x-axis (since we made year a factor/category), we need to also specify the `group` aesthetic.

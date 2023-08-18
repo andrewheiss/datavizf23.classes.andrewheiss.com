@@ -347,7 +347,7 @@ ggplot(data = troops,
                      linewidth = survivors)) +
   geom_path(lineend = "round", linejoin = "mitre") + 
   scale_linewidth_continuous(range = c(1, 20),
-                             labels = scales::comma) +
+                             labels = scales::label_comma()) +
   theme_gray(base_size = 20)
 ```
 
@@ -466,7 +466,7 @@ ggplot(data = gapminder_2007,
   geom_point() +
   scale_x_log10() +
   scale_size_continuous(range = c(1, 15),
-                        labels = scales::comma) +
+                        labels = scales::label_comma()) +
   theme_gray(base_size = 20)
 ```
 
@@ -1371,7 +1371,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp,
                       size = pop, color = country)) +
   geom_point(alpha = 0.7) +
   scale_size(range = c(2, 12)) +
-  scale_x_log10(labels = scales::dollar) +
+  scale_x_log10(labels = scales::label_dollar()) +
   guides(size = "none", color = "none") +
   facet_wrap(~continent) +
   # Special gganimate stuff
