@@ -333,7 +333,7 @@ world_shapes <- read_sf("data/ne_110m_admin_0_countries/ne_110m_admin_0_countrie
   filter(ISO_A3 != "ATA")
 
 base_map <- ggplot() + 
-  geom_sf(data = world_shapes, fill = "#B2B1F9", size = 0.1, color = "#0D0887") +
+  geom_sf(data = world_shapes, fill = "#B2B1F9", linewidth = 0.1, color = "#0D0887") +
   theme_void(base_family = "Fira Sans Condensed") + 
   theme(plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "lines"),
         plot.title = element_text(margin = margin(b = 3), face = "bold"),
@@ -385,7 +385,7 @@ states_48 <- us_states %>%
   filter(!(STUSPS %in% c("HI", "AK", "PR")))
 
 map_nad83 <- ggplot() +
-  geom_sf(data = states_48, fill = "#B2B1F9", size = 0.25, color = "#0D0887") +
+  geom_sf(data = states_48, fill = "#B2B1F9", linewidth = 0.25, color = "#0D0887") +
   labs(title = "NAD83",
        caption = 'crs = "EPSG:4269"') +
   coord_sf(crs = st_crs("EPSG:4269"), datum = NA) +
@@ -395,7 +395,7 @@ map_nad83 <- ggplot() +
         plot.caption = element_text(family = "Consolas", color = "grey50"))
 
 map_albers <- ggplot() +
-  geom_sf(data = states_48, fill = "#B2B1F9", size = 0.25, color = "#0D0887") +
+  geom_sf(data = states_48, fill = "#B2B1F9", linewidth = 0.25, color = "#0D0887") +
   labs(title = "Albers",
        caption = 'crs = "ESRI:102003"') +
   coord_sf(crs = st_crs("ESRI:102003"), datum = NA) +
@@ -814,7 +814,7 @@ ggplot() +
 ggplot() +
   geom_sf(data = world_shapes, 
           aes(fill = POP_EST),
-          color = "white", size = 0.15) +
+          color = "white", linewidth = 0.15) +
   coord_sf(crs = "+proj=robin") +
   scale_fill_gradient(labels = scales::comma) +
   labs(fill = NULL) +

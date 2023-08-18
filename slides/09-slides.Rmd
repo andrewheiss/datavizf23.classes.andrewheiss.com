@@ -410,12 +410,12 @@ ggplot(gapminder_highlighted,
        aes(x = year, y = lifeExp, 
            group = country, 
            color = is_oceania, 
-           size = is_oceania)) +
+           linewidth = is_oceania)) +
   geom_line() +
   scale_color_manual(values = c("grey70", 
                                 "red")) +
   scale_size_manual(values = c(0.1, 0.5)) +
-  guides(color = "none", size = "none") +
+  guides(color = "none", linewidth = "none") +
   theme_minimal()
 ```
 ]

@@ -117,7 +117,7 @@ minard_temps <- read_csv("data/Minard.temp.csv") %>%
   mutate(day_index = 1:n())
 
 ggplot(minard_temps, aes(x = day_index, y = temp)) +
-  geom_line(color = "#4472C4", size = 3) + 
+  geom_line(color = "#4472C4", linewidth = 3) + 
   labs(x = "Days since retreat from Moscow", y = "°C") +
   theme_gdocs(base_size = 30)
 ```
@@ -289,11 +289,11 @@ ggplot(data = troops) +
   geom_path(mapping = aes(x = longitude,
                           y = latitude,
                           color = direction,
-                          size = survivors))
+                          linewidth = survivors))
 ', eval = FALSE) %>%
   flair("troops", background = "#CBB5FF", before = "<b>", after = "</b>") %>% 
   flair("geom_path", background = "#FFDFD1", before = "<b>", after = "</b>") %>% 
-  flair_rx("x = longitude|y = latitude|color = direction|size = survivors", 
+  flair_rx("x = longitude|y = latitude|color = direction|linewidth = survivors", 
            background = "#FFD0CF", before = "<b>", after = "</b>")
 ```
 
@@ -329,11 +329,11 @@ ggplot(data = troops) +
   geom_path(mapping = aes(x = longitude,
                           y = latitude,
                           color = direction,
-                          size = survivors))
+                          linewidth = survivors))
 ', eval = FALSE) %>%
   flair("troops", background = "#CBB5FF", before = "<b>", after = "</b>") %>% 
   flair("geom_path", background = "#FFDFD1", before = "<b>", after = "</b>") %>% 
-  flair_rx("x = longitude|y = latitude|color = direction|size = survivors", 
+  flair_rx("x = longitude|y = latitude|color = direction|linewidth = survivors", 
            background = "#FFD0CF", before = "<b>", after = "</b>")
 ```
 
@@ -344,7 +344,7 @@ ggplot(data = troops,
        mapping = aes(x = longitude,
                      y = latitude,
                      color = direction,
-                     size = survivors)) +
+                     linewidth = survivors)) +
   geom_path(lineend = "round", linejoin = "mitre") + 
   scale_size_continuous(range = c(1, 20),
                         labels = scales::comma) +

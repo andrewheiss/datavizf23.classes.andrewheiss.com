@@ -298,7 +298,7 @@ fake_survey <- tribble(
   mutate(response = fct_rev(fct_inorder(response)))
 
 ggplot(fake_survey, aes(x = response, y = count, group = 1)) +
-  geom_line(size = 1, color = "grey50") +
+  geom_line(linewidth = 1, color = "grey50") +
   geom_point(aes(color = response), size = 9) +
   scale_color_scico_d(palette = "berlin", direction = -1) +
   expand_limits(y = 0) +
@@ -378,7 +378,7 @@ claims <- fred_raw %>%
 ggplot() +
   geom_rect(data = recessions, aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             fill = "#FF851B", alpha = 0.2) +
-  geom_line(data = claims, aes(x = date, y = claims), size = 0.5, color = "#85144b") +
+  geom_line(data = claims, aes(x = date, y = claims), linewidth = 0.5, color = "#85144b") +
   scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
   scale_y_continuous(labels = comma) +
   labs(x = NULL, y = "Initial unemployment claims",
@@ -512,7 +512,7 @@ tornado <- tibble(x = 1:10,
   mutate(dy = y - lag(y))
 
 plot1 <- ggplot(tornado, aes(x = x, y = y)) +
-  geom_path(size = 2, linejoin = "round", lineend = "round") +
+  geom_path(linewidth = 2, linejoin = "round", lineend = "round") +
   geom_point(size = 3) +
   scale_x_continuous(breaks = 0:10) +
   coord_cartesian(xlim = c(1, 10), ylim = c(1, 10)) +
@@ -520,8 +520,8 @@ plot1 <- ggplot(tornado, aes(x = x, y = y)) +
   theme_bw(base_family = "Fira Sans Condensed")
 
 plot2 <- ggplot(drop_na(tornado, dy), aes(x = dy, y = y)) +
-  geom_vline(xintercept = 0, size = 1, linetype = "dotted") +
-  geom_path(size = 2, linejoin = "round", lineend = "round") +
+  geom_vline(xintercept = 0, linewidth = 1, linetype = "dotted") +
+  geom_path(linewidth = 2, linejoin = "round", lineend = "round") +
   geom_point(size = 3) +
   geom_label_repel(aes(label = x), family = "Fira Sans Condensed") +
   coord_cartesian(xlim = c(-2, 3), ylim = c(1, 10)) +
@@ -566,7 +566,7 @@ unemp_inflation_small <- unemp_inflation %>%
             unemployment = mean(unemployment))
 
 ggplot(unemp_inflation_small, aes(x = unemployment, y = inflation)) +
-  geom_path(size = 1, color = "grey50") +
+  geom_path(linewidth = 1, color = "grey50") +
   geom_point() +
   geom_text_repel(aes(label = year), vjust = -0.5, family = "Fira Sans Condensed") +
   scale_x_continuous(labels = percent_format(accuracy = 1)) +
@@ -582,13 +582,13 @@ ggplot(unemp_inflation_small, aes(x = unemployment, y = inflation)) +
 ```{r unemp-inflation-good, echo=FALSE, fig.width=4.8, fig.height=4.2, out.width="100%"}
 plot_inflation <- ggplot(drop_na(unemp_inflation, inflation), 
                          aes(x = date, y = inflation)) +
-  geom_line(size = 1, color = "#F012BE") +
+  geom_line(linewidth = 1, color = "#F012BE") +
   scale_y_continuous(labels = percent_format(accuracy = 1)) +
   labs(x = NULL, y = "Inflation") +
   theme_minimal(base_family = "Fira Sans Condensed")
 
 plot_unempl <- ggplot(unemp_inflation, aes(x = date, y = unemployment)) +
-  geom_line(size = 1, color = "#FF851B") +
+  geom_line(linewidth = 1, color = "#FF851B") +
   scale_y_continuous(labels = percent_format(accuracy = 1)) +
   labs(x = NULL, y = "Unemployment") +
   theme_minimal(base_family = "Fira Sans Condensed")
@@ -630,12 +630,12 @@ class: title title-1
 measles_1963 <- filter(measles, Year == 1963)
 
 ggplot(measles, aes(x = Year, y = Cases)) +
-  geom_line(size = 1, color = "#3D9970") +
+  geom_line(linewidth = 1, color = "#3D9970") +
   scale_y_continuous(labels = comma) +
   annotate(geom = "segment", x = 1963, xend = 1963, 
            y = 320000, yend = 360000,
            arrow = arrow(angle = 15, length = unit(0.3, "lines")),
-           color = "#F012BE", size = 0.5) +
+           color = "#F012BE", linewidth = 0.5) +
   annotate(geom = "text", x = 1963, y = 300000, 
            label = "Vaccine introduced in 1963", hjust = 0.5, vjust = 0.5,
            family = "Fira Sans Condensed", color = "#F012BE") +
@@ -662,13 +662,13 @@ I used [this big PDF table from the CDC](https://web.archive.org/web/20190120205
 
 ```{r measles-full, echo=FALSE, fig.width=6, fig.height=3.75, out.width="70%"}
 ggplot(measles, aes(x = Year, y = Cases)) +
-  geom_line(size = 1, color = "#3D9970") +
+  geom_line(linewidth = 1, color = "#3D9970") +
   scale_x_continuous(breaks = seq(1950, 2020, 10)) +
   scale_y_continuous(labels = comma) +
   annotate(geom = "segment", x = 1967, xend = 1965, 
            y = measles_1963$Cases, yend = measles_1963$Cases,
            arrow = arrow(angle = 15, length = unit(0.3, "lines")),
-           color = "#F012BE", size = 0.5) +
+           color = "#F012BE", linewidth = 0.5) +
   annotate(geom = "text", x = 1967.5, y = measles_1963$Cases, 
            label = "Vaccine introduced in 1963", hjust = 0, vjust = 0.5,
            family = "Fira Sans Condensed", color = "#F012BE") +
@@ -722,7 +722,7 @@ ggplot(filter(retail_sales,
               date >= "2019-01-01",
               date <= "2019-12-31"), 
        aes(x = date, y = sales)) +
-  geom_line(size = 1, color = "#85144b") +
+  geom_line(linewidth = 1, color = "#85144b") +
   scale_x_date(breaks = "1 month", date_labels = "%B",
                guide = guide_axis(n.dodge = 2)) +
   scale_y_continuous(labels = comma) +
@@ -746,7 +746,7 @@ ggplot(retail_sales,
   geom_rect(data = filter(recessions, start > "1999-12-31"), 
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.1) +
-  geom_line(size = 0.5, color = "#85144b") +
+  geom_line(linewidth = 0.5, color = "#85144b") +
   scale_y_continuous(labels = comma) +
   labs(x = NULL, y = "Millions of dollars",
        title = "Total retail sales in the United States, 2000–2019",
@@ -767,7 +767,7 @@ ggplot(sales_model_components, aes(x = year_month, y = value)) +
   geom_rect(data = filter(recessions, start > "1999-12-31"), 
             aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
             inherit.aes = FALSE, fill = "#B10DC9", alpha = 0.1) +
-  geom_line(aes(color = is_component), size = 0.5) +
+  geom_line(aes(color = is_component), linewidth = 0.5) +
   scale_x_yearmonth(expand = c(0, 0)) +
   scale_y_continuous(labels = comma) +
   scale_color_manual(values = c("grey60", "#111111")) +

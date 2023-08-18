@@ -517,7 +517,7 @@ $$
 ```{r simple-line-1, echo=FALSE, fig.dim=c(4.8, 3.5), out.width="100%"}
 ggplot(data = tibble(x = 0:5), aes(x = x)) +
   stat_function(fun = function(x) 2 * x - 1, 
-                color = "#BF3984", size = 1.5) +
+                color = "#BF3984", linewidth = 1.5) +
   geom_vline(xintercept = 0) +
   geom_hline(yintercept = 0) +
   scale_x_continuous(breaks = 0:5) +
@@ -538,7 +538,7 @@ $$
 ```{r simple-line-2, echo=FALSE, fig.dim=c(4.8, 3.5), out.width="100%"}
 ggplot(data = tibble(x = 0:14), aes(x = x)) +
   stat_function(fun = function(x) -0.5 * x + 6, 
-                color = "#BF3984", size = 1.5) +
+                color = "#BF3984", linewidth = 1.5) +
   geom_vline(xintercept = 0) +
   geom_hline(yintercept = 0) +
   scale_x_continuous(breaks = 0:14) +
@@ -1012,7 +1012,7 @@ ggplot(predicted_mpg_fancy,
                     (1.96 * .se.fit),
                   fill = drv),
               alpha = 0.5) +
-  geom_line(aes(color = drv), size = 1)
+  geom_line(aes(color = drv), linewidth = 1)
 ```
 ]
 
@@ -1038,7 +1038,7 @@ ggplot(predicted_mpg_fancy,
                     (1.96 * .se.fit),
                   fill = drv),
               alpha = 0.5) +
-  geom_line(aes(color = drv), size = 1) + 
+  geom_line(aes(color = drv), linewidth = 1) + 
   guides(fill = "none", color = "none") + #<<
   facet_wrap(vars(drv)) #<<
 ```

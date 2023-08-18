@@ -376,7 +376,7 @@ plot_word_ratios <- word_ratios %>%
 ggplot(plot_word_ratios, aes(word, logratio, color = logratio < 0)) +
   geom_segment(aes(x = word, xend = word,
                    y = 0, yend = logratio), 
-               size = 1.1, alpha = 0.6) +
+               linewidth = 1.1, alpha = 0.6) +
   geom_point(size = 3.5) +
   coord_flip() +
   labs(y = "How much more/less likely", x = NULL) +
