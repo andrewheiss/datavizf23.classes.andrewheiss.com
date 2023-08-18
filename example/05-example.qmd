@@ -1,7 +1,7 @@
 ---
 title: "Themes"
-date: "2023-06-19"
-date_end: "2023-06-23"
+date: "2023-09-18"
+date_end: "2023-09-22"
 ---
 
 ```{r setup, include=FALSE}
@@ -9,7 +9,7 @@ knitr::opts_chunk$set(fig.width = 8, fig.height = 4.8, fig.align = "center", col
 set.seed(1234)
 ```
 
-The [lesson for today's session](/lesson/05-lesson.qmd) is a fairly comprehensive introduction to using the `theme()` function in ggplot, and [this page by Henry Wang](https://henrywang.nl/ggplot2-theme-elements-demonstration/) is a good cheat sheet for remembering which theme elements are which on a plot—and I like [this PDF cheatsheet by Clara Granell](https://github.com/claragranell/ggplot2/blob/main/ggplot_theme_system_cheatsheet.pdf) even better.
+The [lesson for this week's session](/lesson/05-lesson.qmd) is a fairly comprehensive introduction to using the `theme()` function in ggplot, and [this page by Henry Wang](https://henrywang.nl/ggplot2-theme-elements-demonstration/) is a good cheat sheet for remembering which theme elements are which on a plot—and I like [this PDF cheatsheet by Clara Granell](https://github.com/claragranell/ggplot2/blob/main/ggplot_theme_system_cheatsheet.pdf) even better.
 
 For [your exercise](/assignment/05-exercise.qmd), you're going to create the world's ugliest plot. For this example, we'll use the principles of CRAP to make a great theme. 
 

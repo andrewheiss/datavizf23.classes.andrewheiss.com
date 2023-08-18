@@ -1,6 +1,6 @@
 ---
 title: "Comparisons"
-date: "2023-07-03"
+date: "2023-10-16"
 ---
 
 ```{r setup, include=FALSE}
@@ -33,7 +33,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `08-exercise.zip`](/projects/08-exercise.zip)
 
-[The example for today's session](/example/08-example.qmd) will be ***incredibly*** helpful for this exercise. Reference it.
+[The example for this week's session](/example/08-example.qmd) will be ***incredibly*** helpful for this exercise. Reference it.
 
 Again, you don't need to make your plots super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing colors or modifying themes and theme elements.
 
@@ -84,7 +84,7 @@ Some hints/tips:
 
 **This is entirely optional but might be fun.**
 
-For extra fun times, if you feel like it, create a bump chart showing something from the unemployment data (perhaps the top 10 states or bottom 10 states in unemployment?) Adapt the code in the [example for today's session](/example/08-example.qmd).
+For extra fun times, if you feel like it, create a bump chart showing something from the unemployment data (perhaps the top 10 states or bottom 10 states in unemployment?) Adapt the code in the [example for this week's session](/example/08-example.qmd).
 
 If you do this, plotting 51 lines is going to be a huge mess. But filtering the data is also a bad idea, because states could drop in and out of the top/bottom 10 over time, and we don't want to get rid of them. Instead, you can zoom in on a specific range of data in your plot with `coord_cartesian(ylim = c(1, 10))`, for instance.
 

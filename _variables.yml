@@ -14,11 +14,11 @@ instructor:
 
 course:
   number: "PMAP 8101"
-  semester: "Summer 2023"
+  semester: "Fall 2023"
   days: "Any day"
   time: "Asynchronous"
   location: "Anywhere"
-  dates: "June 5–July 30, 2023"
+  dates: "August 12–December 11, 2023"
   github: "https://www.github.com/andrewheiss/datavizf23.classes.andrewheiss.com"
   url: "https://datavizf23.classes.andrewheiss.com"
   copyright_year: "2023"

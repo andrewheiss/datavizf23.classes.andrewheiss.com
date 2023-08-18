@@ -1,6 +1,6 @@
 ---
 title: "Text"
-date: "2023-07-24"
+date: "2023-11-27"
 ---
 
 ```{r setup, include=FALSE}
@@ -29,7 +29,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `13-exercise.zip`](/projects/13-exercise.zip)
 
-The [example from today's session](/example/13-example.qmd) will be incredibly helpful for this exercise.
+The [example from this week's session](/example/13-example.qmd) will be incredibly helpful for this exercise.
 
 This can be as simple or as complex as you want. You don't need to make your plots super fancy, but if you're feeling brave, experiment with changing colors or modifying themes and theme elements.
 

@@ -1,7 +1,7 @@
 ---
 title: "Space"
-date: "2023-07-10"
-date_end: "2023-07-14"
+date: "2023-11-06"
+date_end: "2023-11-10"
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +14,7 @@ source(here::here("R", "learnr-things.R"))
 include_iframe_resizer()
 ```
 
-There *is* a short lesson today! You'll learn the basics of joining two different datasets together, both vertically and horizontally.
+There *is* a short lesson this week! You'll learn the basics of joining two different datasets together, both vertically and horizontally.
 
 There are a few imaginary datasets I've created for you to play with:
 

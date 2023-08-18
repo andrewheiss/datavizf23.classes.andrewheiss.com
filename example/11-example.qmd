@@ -1,7 +1,7 @@
 ---
 title: "Time"
-date: "2023-07-10"
-date_end: "2023-07-14"
+date: "2023-10-30"
+date_end: "2023-11-03"
 ---
 
 ```{r load-targets, include=FALSE}
@@ -246,7 +246,7 @@ recessions_start_end
 
 Finally, we can use `tibble()` to create a brand new little dataset row that includes columns for the start and end dates of each recession. We'll use a combination of `filter()` and `pull()` to extract the start dates (where `recession_change` is 1) and the end dates (where `recession_change` is −1), and then we'll stick those two vectors together in a data frame.
 
-If you're creating this tiny dataset during an actual recession, though, you need to do a little extra step. If you're currently in a recession, the `recession_ends` vector will be one element shorted than the `recession_starts` vector, since the ongoing recession hasn't ended yet. We can check for this with code. If the `recession_ends` vector is shorter than `recesison_starts`, will stick an end date to the recession as `today()` (`today()` by itself returns regular text like `"2023-06-01"`; we need to tell R that this is a date by feeding it to `ymd()`)
+If you're creating this tiny dataset during an actual recession, though, you need to do a little extra step. If you're currently in a recession, the `recession_ends` vector will be one element shorted than the `recession_starts` vector, since the ongoing recession hasn't ended yet. We can check for this with code. If the `recession_ends` vector is shorter than `recesison_starts`, will stick an end date to the recession as `today()` (`today()` by itself returns regular text like `"2023-11-01"`; we need to tell R that this is a date by feeding it to `ymd()`)
 
 ```{r make-recessions-official}
 # Pull out the start dates

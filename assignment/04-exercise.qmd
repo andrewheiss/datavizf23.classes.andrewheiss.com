@@ -1,6 +1,6 @@
 ---
 title: "Amounts and proportions"
-date: "2023-06-20"
+date: "2023-09-18"
 ---
 
 ```{r setup, include=FALSE}
@@ -53,7 +53,7 @@ Make the following plots and briefly explain what they show:
 
 - Show the proportion of approved projects by borough and category simultaneously using a heatmap
 
-[The example for today's session](/example/04-example.qmd) will be *incredibly* helpful for this exercise. Reference it.
+[The example for this week's session](/example/04-example.qmd) will be *incredibly* helpful for this exercise. Reference it.
 
 You don't need to make these super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing fill colors with `scale_fill_manual()` or with viridis palettes. 
 

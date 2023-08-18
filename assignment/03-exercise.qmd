@@ -1,6 +1,6 @@
 ---
 title: "Mapping data to graphics"
-date: "2023-06-20"
+date: "2023-09-11"
 ---
 
 ```{r setup, include=FALSE}

@@ -1,12 +1,12 @@
 ---
 title: "Enhancing graphics"
-date: "2023-07-17"
-date_end: "2023-07-21"
+date: "2023-11-27"
+date_end: "2023-12-01"
 ---
 
 ## Why enhance graphics?
 
-The content from today isn't really code-based at all. Instead, you're learning about how to take a plot from R and make it *fancy* in a vector editing program like Illustrator, Gravit Designer, or Inkscape.
+The content from this week isn't really code-based at all. Instead, you're learning about how to take a plot from R and make it *fancy* in a vector editing program like Illustrator, Gravit Designer, or Inkscape.
 
 This concept comes from a common workflow in the real world, where organizations like news outlets, think tanks, research centers, or nonprofits will publish highly polished plots in annual reports, magazines, and other types of publications. These graphics often have to follow specific in-house style guidelines and use specific colors and fonts and other design elements. Even if you don't work for a place with in-house style guides, you'll often want to make some edits to your plots by hand after you create them.
 
@@ -38,7 +38,7 @@ You still can't do everything with R. ggplot can't create fancy font ligatures l
 
 ## Abbreviated example
 
-In this video I use the code for the hot dog plot that I provide in today's assignment to create a plot, export it, and make edits to it both in Illustrator and [Gravit Designer](https://www.designer.io/en/). It's not a complete example at all, but I show you the general process for adding text and lines and editing plot elements.
+In this video I use the code for the hot dog plot that I provide in this week's assignment to create a plot, export it, and make edits to it both in Illustrator and [Gravit Designer](https://www.designer.io/en/). It's not a complete example at all, but I show you the general process for adding text and lines and editing plot elements.
 
 <div class="ratio ratio-16x9">
 <iframe src="https://www.youtube.com/embed/L-tUSEMWrgE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>

@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R and the tidyverse"
-date: "2023-06-05"
-date_end: "2023-06-09"
+date: "2023-08-21"
+date_end: "2023-08-25"
 ---
 
 ```{r setup, include=FALSE}
@@ -10,7 +10,7 @@ knitr::opts_chunk$set(fig.align = "center")
 
 ## Part 1: The basics of R and dplyr
 
-For the first part of today's lesson, you need to work through a few of RStudio's introductory primers. You'll do these in your browser and type code and see results there.
+For the first part of this week's lesson, you need to work through a few of RStudio's introductory primers. You'll do these in your browser and type code and see results there.
 
 You'll learn some of the basics of R, as well as some powerful methods for manipulating data with the {dplyr} package. 
 

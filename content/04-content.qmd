@@ -1,7 +1,7 @@
 ---
 title: "Amounts and proportions"
-date: "2023-06-12"
-date_end: "2023-06-16"
+date: "2023-09-11"
+date_end: "2023-09-15"
 ---
 
 ```{r slides-videos, echo=FALSE, include=FALSE}
@@ -48,7 +48,7 @@ Remember, you don't need to answer all of these—or even any of them! These are
 
 ## Slides
 
-The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+The slides for this week's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
 slide_buttons("/slides/04-slides")

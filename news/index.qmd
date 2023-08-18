@@ -12,8 +12,8 @@ listing:
   sort-ui: true
   date-format: "dddd MMMM D, YYYY [at] h:mm A"
   feed: 
-    title: "Data Visualization (Summer PMAP 8101) News"
-    description: "Updates and FAQs for PMAP 8101 at Georgia State University, Summer 2023"
+    title: "Data Visualization (Fall PMAP 8101) News"
+    description: "Updates and FAQs for PMAP 8101 at Georgia State University, Fall 2023"
   categories: false
 page-layout: full
 sidebar: false

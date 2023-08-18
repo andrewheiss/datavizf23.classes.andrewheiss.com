@@ -1,6 +1,6 @@
 ---
 title: "Space"
-date: "2023-07-17"
+date: "2023-11-13"
 ---
 
 ```{r setup, include=FALSE}
@@ -40,7 +40,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `12-exercise.zip`](/projects/12-exercise.zip)
 
-The [example from today's session](/example/12-example.qmd) shows how to load and plot shapefiles and will be incredibly helpful as you do this exercise.
+The [example from this week's session](/example/12-example.qmd) shows how to load and plot shapefiles and will be incredibly helpful as you do this exercise.
 
 This can be as simple or as complex as you want. You don't need to make your plot super fancy, but if you're feeling brave, experiment with changing colors or modifying themes and theme elements.
 

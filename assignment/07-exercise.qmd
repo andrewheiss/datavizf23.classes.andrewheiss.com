@@ -1,6 +1,6 @@
 ---
 title: "Relationships"
-date: "2023-07-03"
+date: "2023-10-09"
 ---
 
 ```{r setup, include=FALSE}
@@ -33,7 +33,7 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `07-exercise.zip`](/projects/07-exercise.zip)
 
-[The example for today's session](/example/07-example.qmd) will be ***incredibly*** helpful for this exercise. Reference it.
+[The example for this week's session](/example/07-example.qmd) will be ***incredibly*** helpful for this exercise. Reference it.
 
 Again, you don't need to make your plots super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing colors or modifying themes and theme elements.
 

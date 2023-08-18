@@ -1,6 +1,6 @@
 ---
 title: "Time"
-date: "2023-07-17"
+date: "2023-11-06"
 ---
 
 ```{r setup, include=FALSE}
@@ -31,9 +31,9 @@ To check that you put everything in the right places, you can download and unzip
 
 - [{{< fa file-archive >}} `11-exercise.zip`](/projects/11-exercise.zip)
 
-The [example from today's session](/example/11-example.qmd) shows how to get data from FRED, and the examples from sessions [8](/example/08-example.qmd) and [9](/example/09-example.qmd) show. You can also use gapminder, or any other dataset that includes a time-related column (so not `mpg`). 
+The [example from this week's session](/example/11-example.qmd) shows how to get data from FRED, and the examples from sessions [8](/example/08-example.qmd) and [9](/example/09-example.qmd) show. You can also use gapminder, or any other dataset that includes a time-related column (so not `mpg`). 
 
-There's no specific way you should visualize time. Show it as a line, or as bars, or with a heatmap, or with ridgeplots, or with whatever is most appropriate for the story you're telling. You do not have to recreate the example from today. You're free to do whatever you want! 
+There's no specific way you should visualize time. Show it as a line, or as bars, or with a heatmap, or with ridgeplots, or with whatever is most appropriate for the story you're telling. You do not have to recreate the example from this week. You're free to do whatever you want! 
 
 This can be as simple or as complex as you want. You don't need to make your plot super fancy, but if you're feeling brave, experiment with changing colors or modifying themes and theme elements.
 

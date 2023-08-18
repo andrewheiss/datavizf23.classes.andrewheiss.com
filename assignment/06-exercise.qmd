@@ -1,6 +1,6 @@
 ---
 title: "Uncertainty"
-date: "2023-06-26"
+date: "2023-10-02"
 ---
 
 ```{r setup, include=FALSE}
@@ -53,7 +53,7 @@ Make the following plots and briefly explain what they show:
 
 - Make a filtered dataset that selects data from only 2007 *and* removes Oceania. Show the distribution of *logged* GDP per capita across the *four* continents using some combination of boxplots and/or violin plots and/or strip plots, either overlaid on top of each other, or using their `geom_half_*()` counterparts from {gghalves}.
 
-[The example for today's session](/example/06-example.qmd) will be *incredibly* helpful for this exercise. Reference it.
+[The example for this week's session](/example/06-example.qmd) will be *incredibly* helpful for this exercise. Reference it.
 
 You don't need to make these super fancy, but if you're feeling brave, experiment with adding a `labs()` layer or changing colors or modifying themes and theme elements.
 
