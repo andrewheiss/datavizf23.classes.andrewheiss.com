@@ -45,9 +45,9 @@ Here's what you need to do:
        NOTHING
    ```
 
-5. **Clean** the data using the code I've given you below.
+5. **Clean** the data [using the code I've given you below](#data-cleaning-code).
 
-6. **Summarize** the data somehow. There is data for 60 countries over 10 years, so you'll probably need to aggregate or reshape the data somehow (unless you do a 60-country sparkline). I've included some examples down below.
+6. **Summarize** the data somehow. There is data for 60 countries over 10 years, so you'll probably need to aggregate or reshape the data somehow (unless you do a 60-country sparkline).
 
 7. **Create** an appropriate time-based visualization based on the data. I've shown a few different ways to summarize the data so that it's plottable down below. Don't just calculate overall averages or totals per country—the visualization needs to deal with change over time. *Do as much polishing and refining in R*—make adjustments to the colors, scales, labels, grid lines, and even fonts, etc.
 
@@ -81,7 +81,7 @@ For this assignment, I am less concerned with the code (that's why I gave most o
 
 **Please seek out help when you need it!** You know enough R (and have enough examples of code from class and your readings) to be able to do this. Your project has to be turned in individually, and your visualization should be your own (i.e. if you work with others, don't all turn in the same graph), but you should work with others! Reach out to me for help too—I'm here to help!
 
-*You can do this,* and you'll feel like a budding dataviz witch/wizard when you're done.
+**You can do this.**
 
 
 ## Data cleaning code
@@ -236,79 +236,4 @@ refugees_continents_cumulative <- refugees_clean %>%
 refugees_continents_cumulative %>%
   arrange(origin_continent) %>%
   head()
-```
-
-## Visualization ideas
-
-You can redesign one of these ugly, less-than-helpful graphs, or create a brand new visualization (like a map!).
-
-```{r create-plots, fig.width=11, fig.height=6, warning=FALSE, message=FALSE, echo=FALSE}
-library(patchwork)
-
-plot_countries <- ggplot(filter(refugees_clean, 
-                                iso3 %in% c("IRQ", "SYR", "IRN")),
-                         aes(x = year_date, y = number, 
-                             color = origin_country)) +
-  geom_line() + 
-  labs(title = "1. Specific countries over time") +
-  theme_minimal(base_size = 10) +
-  theme(legend.position = "bottom",
-        plot.title = element_text(face = "bold"))
-
-plot_countries_cum <- ggplot(filter(refugees_countries_cumulative,
-                                    iso3 %in% c("IRQ", "SYR", "IRN")),
-                             aes(x = year_date, y = cumulative_total, 
-                                 color = origin_country)) +
-  geom_line() +
-  labs(title = "2. Specific countries over time, cumulative") +
-  theme_minimal(base_size = 10) +
-  theme(legend.position = "bottom",
-        plot.title = element_text(face = "bold"))
-
-plot_continents <- ggplot(refugees_continents,
-                          aes(x = year_date, y = total, 
-                              color = origin_continent)) +
-  geom_line() +
-  labs(title = "3. Continents over time") +
-  theme_minimal(base_size = 10) +
-  theme(legend.position = "bottom",
-        plot.title = element_text(face = "bold"))
-
-plot_continents_cum <- ggplot(refugees_continents_cumulative,
-                              aes(x = year_date, y = cumulative_total, 
-                                  color = origin_continent)) +
-  geom_line() +
-  labs(title = "4. Continents over time, cumulative") +
-  theme_minimal(base_size = 10) +
-  theme(legend.position = "bottom",
-        plot.title = element_text(face = "bold"))
-
-plot_all <- plot_countries + plot_countries_cum + 
-  plot_continents + plot_continents_cum
-
-plot_all
-```
-
-Or be super brave and make a map!
-
-```{r create-map, fig.width=11, fig.height=5, echo=FALSE, warning=FALSE, message=FALSE}
-library(sf)
-
-world_shapes <- read_sf(here::here("files", "data", "external_data", "maps",
-                                   "ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp"))
-
-refugees_2015 <- refugees_clean %>% 
-  filter(year == 2015)
-
-refugee_map <- world_shapes %>%
-  left_join(refugees_2015, by = c("ISO_A3" = "iso3")) %>%
-  filter(ISO_A3 != "ATA")
-
-ggplot() + 
-  geom_sf(data = refugee_map, aes(fill = number), linewidth = 0.25, color = "black") + 
-  coord_sf(crs = st_crs("ESRI:54030"), datum = NA) +
-  scale_fill_viridis_c(na.value = "white") +
-  labs(title = "5. Refugees admitted to the US in 2015") +
-  theme_void() +
-  theme(plot.title = element_text(face = "bold"))
 ```

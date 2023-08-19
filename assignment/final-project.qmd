@@ -33,7 +33,7 @@ Accordingly, you have some choice in what data you can use for this project. I'v
 ### Business management
 
 - [515K Hotel Reviews Data in Europe](https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe): 515,000 customer reviews and scoring of 1,493 luxury hotels across Europe. Source: Booking.com.
-- [Chase Bank Branch Deposits, 2010–2016](https://www.kaggle.com/chasebank/bank-deposits): Records for every branch of Chase Bank in the United States. This dataset is not quite tidy and will require a little bit of reshaping with `gather()` or `pivot_longer()`, since there are individual columns of deposits per year. Source: Chase Bank. 
+- [Chase Bank Branch Deposits, 2010–2016](https://www.kaggle.com/chasebank/bank-deposits): Records for every branch of Chase Bank in the United States. This dataset is not quite tidy and will require a little bit of reshaping with `pivot_longer()`, since there are individual columns of deposits per year. Source: Chase Bank. 
 
 
 ## Instructions

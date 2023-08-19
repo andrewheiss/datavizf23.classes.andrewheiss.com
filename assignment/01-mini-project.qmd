@@ -11,56 +11,9 @@ New York City is full of urban wildlife, and rats are one of the city's most inf
 
 \ 
 
-NYC keeps incredibly detailed data regarding animal sightings, including rats, and [it makes this data publicly available](https://www.kaggle.com/new-york-city/nyc-rat-sightings/data). 
+NYC keeps incredibly detailed data regarding animal sightings, including rats, and [it makes this data publicly available](https://www.kaggle.com/new-york-city/nyc-rat-sightings/data). For this first mini project, you will use R {ggplot2} to tell an interesting story hidden in that data. 
 
-For this first mini project, you will use R {ggplot2} to tell an interesting story hidden in the data. You can recreate and improve one of these ugly, less-than-helpful graphs, or (even better!) create a new story by looking at other variables in the data:
-
-```{r bad-example, echo=FALSE, out.width="100%", fig.align="center"}
-#| column: screen-inset-right
-knitr::include_graphics("/files/img/assignments/rat_examples.png", error = FALSE)
-```
-
-```{r, eval=FALSE, include=FALSE}
-# I just took screenshots of these and put them together in Photoshop, but
-# here's the code I originally used
-df1 <- rats_clean %>%
-  count(location_type, sighting_year) %>%
-  filter(sighting_year > 2013)
-df1
-
-ggplot(df1, aes(x = location_type, y = n)) +
-  geom_bar(stat = "identity") + 
-  coord_flip() +
-  facet_wrap(~ sighting_year)
-
-df2 <- rats_clean %>%
-  count(borough, sighting_year)
-df2
-
-ggplot(df2, aes(x = "", y = n, fill = borough)) +
-  geom_bar(stat = "identity", width = 1) +
-  coord_polar("y", start=0) +
-  theme_minimal() + 
-  theme(axis.text.x = element_blank(), legend.position = "bottom") +
-  labs(x = NULL, y = NULL, title = "Rat sightings across NYC") +
-  facet_wrap(~ sighting_year)
-
-df3 <- rats_clean %>%
-  count(created_date, borough)
-
-ggplot(df3, aes(x = created_date, y = n, color = borough)) + 
-  geom_line()
-
-# Table for homework slopegraph
-rats_homework <- rats_clean %>%
-  filter(sighting_year %in% c(2010, 2016)) %>%
-  count(borough, sighting_year)
-
-write_csv(rats_homework, path = "~/Desktop/rats.csv")
-
-ggplot(rats_homework, aes(x = sighting_year, y = n, color = borough)) +
-  geom_line()
-```
+(Don't worry! You're not completely on your own! [I've given you some starter code below](#starter-code).)
 
 ## Instructions
 
