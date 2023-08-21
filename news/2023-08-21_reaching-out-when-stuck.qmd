@@ -20,7 +20,7 @@ There are a few easy guidelines to remember when asking for help:
 
 1. Be kind.
 
-2. Ask questions with as complete information as possible. Do not just post a photo from your phone and say something like "help?", or say something like "my code isn't working" and that's it, provide more background (it's hard to read your computer's mind). 
+2. Ask questions with as complete information as possible. Do not just post a photo from your phone and say something like "help?" or "my code isn't working" and that's it—provide more background (it's hard to read your computer's mind). 
 
    Explain specifically what you're trying to do and provide code when possible. You can actually format R code on Slack if you click on the little lightning icon in the bottom left of the typing area and search for "text snippet"—that'll open a dialog that will let you paste in text and add R syntax highlighting. You can also paste your code between triple backticks on Slack and it'll format it in monospaced font (though not with the neat syntax highlighting that you get when using Slack's text snippet thing):
 
