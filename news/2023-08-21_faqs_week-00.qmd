@@ -13,7 +13,7 @@ Lots of you had similar questions and concerns, so I’ve consolidated the commo
 
 ***ABSOLUTELY***. DO NOT ATTEMPT TO DO THIS CLASS WITHOUT EVER ASKING A SINGLE QUESTION.
 
-Make sure you read [this about building a community](/news/2023-08-21_building-community.qmd) and [this about the 30-minute rule and how to ask for help](news/2023-08-21_reaching-out-when-stuck.qmd).
+Make sure you read [this about building a community](/news/2023-08-21_building-community.qmd) and [this about the 30-minute rule and how to ask for help](/news/2023-08-21_reaching-out-when-stuck.qmd).
 
 
 ### Will we cover {X}? 
