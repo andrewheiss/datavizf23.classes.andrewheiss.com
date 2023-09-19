@@ -21,7 +21,7 @@ slide_details <- tibble::tribble(
 ## Readings
 
 - {{< fa book >}} [Chapter 22](https://clauswilke.com/dataviz/figure-titles-captions.html) in *Fundamentals of Data Visualization* [@Wilke:2018]
-- {{< fa arrow-up-right-from-square >}} Clara Granell, ["ggplot2 Theme System Cheatsheet"](Andrew Heiss)
+- {{< fa arrow-up-right-from-square >}} Clara Granell, ["ggplot2 Theme System Cheatsheet"](https://github.com/claragranell/ggplot2/blob/main/ggplot_theme_system_cheatsheet.pdf)
 - {{< fa arrow-up-right-from-square >}} Henry Wang, ["ggplot2 Theme Elements Demonstration"](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
 - {{< fa arrow-up-right-from-square >}} Andrew Heiss, ["Quick and easy ways to deal with long labels in ggplot2"](https://www.andrewheiss.com/blog/2022/06/23/long-labels-ggplot/)
 - {{< fa arrow-up-right-from-square >}} Glance through the documentation for ggplot's [complete themes](https://ggplot2.tidyverse.org/reference/ggtheme.html) and [`theme()`](https://ggplot2.tidyverse.org/reference/theme.html), especially the examples near the bottom
