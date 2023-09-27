@@ -20,10 +20,10 @@ execute:
 
 bibliography: files/bib/readings.bib
 csl: files/bib/chicago-author-date.csl
-description-meta: "Use R, ggplot2, and the principles of graphic design to create beautiful and truthful visualizations of data"
 
 website:
   title: "Data Visualization with R"
+  description: "Use R, ggplot2, and the principles of graphic design to create beautiful and truthful visualizations of data"
   site-url: "https://datavizf23.classes.andrewheiss.com"
 
   favicon: "/files/favicon-512.png"
