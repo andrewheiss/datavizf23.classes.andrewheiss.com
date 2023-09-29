@@ -31,8 +31,7 @@ withr::with_dir(here::here(), {
 
 - {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
 - {{< fa university >}} &nbsp; {{< var instructor.office >}}
-- {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
-- {{< fa brands twitter >}} &nbsp; [{{< var instructor.twitter >}}](https://www.twitter.com/{{< var instructor.twitter >}})
+- {{< fa envelope >}} &nbsp; <a href='mailto:{{< var instructor.email >}}'>{{< var instructor.email >}}</a>
 - {{< fa calendar-check >}} &nbsp; [Schedule an appointment]({{< var instructor.appointment_url >}})
 :::
 
