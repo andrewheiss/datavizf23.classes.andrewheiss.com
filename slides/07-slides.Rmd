@@ -939,7 +939,7 @@ ggplot(predicted_mpg,
                     (1.96 * .se.fit)),
               fill = "#5601A4", 
               alpha = 0.5) +
-  geom_line(size = 1, color = "#5601A4")
+  geom_line(linewidth = 1, color = "#5601A4")
 ```
 ]
 
