@@ -7,7 +7,7 @@ date: "2023-10-30"
 knitr::opts_chunk$set(fig.align = "center")
 ```
 
-For this exercise, you'll use whatever data you want to make a plot and add annotations to it. Use a dataset from a past exercise, use one of the built-in datasets like `mpg` or `gapminder` from the {gapminder} package, download stuff from the World Bank using the {WDI} package, or use something from [this list of datasets](/resource/data.qmd).
+For this exercise, you'll use whatever data you want to make a plot and make it interactive. Use a dataset from a past exercise, use one of the built-in datasets like `mpg` or `gapminder` from the {gapminder} package, download stuff from the World Bank using the {WDI} package, or use something from [this list of datasets](/resource/data.qmd). Whatever you want.
 
 ::: {.callout-warning}
 ## THIS IS DIFFERENT
