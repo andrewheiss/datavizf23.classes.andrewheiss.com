@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 Hi everyone!
 
-Just a few quick tips from the past couple sessions:
+Just a few quick tips from the past few weeks:
 
 
 ### Can I use `geom_label_repel()` with maps?
