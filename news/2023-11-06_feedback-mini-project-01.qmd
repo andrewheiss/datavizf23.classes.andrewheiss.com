@@ -27,7 +27,7 @@ First, I'll load and clean the data so I can illustrate stuff below:
 library(tidyverse)
 
 rats_raw <- read_csv(
-  "https://datavizs23.classes.andrewheiss.com/files/data/external_data/Rat_Sightings.csv", 
+  "https://datavizf23.classes.andrewheiss.com/files/data/external_data/Rat_Sightings.csv", 
   na = c("", "NA", "N/A")
 )
 
@@ -68,7 +68,7 @@ rats_clean <- rats_raw %>%
 
 > Your knitted document has warnings and package loading messages.
 
-You should turn off those warnings and messages. See [this](https://datavizs23.classes.andrewheiss.com/news/2023-06-19_faqs_session-03-04.html#how-can-i-hide-warnings-and-messages) and  [this](https://datavizs23.classes.andrewheiss.com/news/2023-07-12_cleaner-nicer-rmd-output.html#clean-up-warnings-and-messages) for more about how.
+You should turn off those warnings and messages. See [this](/news/2023-09-12_faqs_week-03.html#how-can-i-hide-warnings-and-messages) and  [this](/news/2023-10-03_cleaner-nicer-rmd-output.html#clean-up-warnings-and-messages) for more about how.
 
 ### ALL CAPS
 
@@ -116,7 +116,7 @@ ggplot(rats_summarized, aes(x = borough, y = total)) +
 
 > Consider sorting the locations by number of sightings instead of alphabetically
 
-In the plot above, the boroughs on the x-axis are in alphabetic order. If we want to tell a better story, though, it's helpful to reorder them so that we can more easily see which boroughs have the most and least rats. [See here for more about reordering categories](https://datavizs23.classes.andrewheiss.com/news/2023-07-04_faqs_session-07-08.html#i-want-my-bars-to-be-sorted-in-my-plot.-how-can-i-control-their-order). We can sort the data and then use `fct_inorder()` from the {forcats} package (also one of the nine that gets loaded with `library(tidyverse)`) to lock these borough names in the right order:
+In the plot above, the boroughs on the x-axis are in alphabetic order. If we want to tell a better story, though, it's helpful to reorder them so that we can more easily see which boroughs have the most and least rats. [See here for more about reordering categories](/news/2023-10-10_faqs-week-07.html#i-want-my-bars-to-be-sorted-in-my-plot.-how-can-i-control-their-order). We can sort the data and then use `fct_inorder()` from the {forcats} package (also one of the nine that gets loaded with `library(tidyverse)`) to lock these borough names in the right order:
 
 ```{r plot-better-order}
 rats_summarized <- rats_clean %>% 
@@ -167,7 +167,7 @@ ggplot(rats_by_year, aes(x = borough, y = total)) +
 ```
 :::
 
-Alternatively you can stick something in that empty panel like your legend (though in this example it's better to not even have a legend because [it's redundant with the x-axis](https://datavizs23.classes.andrewheiss.com/news/2023-06-27_faqs_session-05-06.html#double-encoding-and-excessive-legends)). The `reposition_legend()` function from the {lemon} package makes this really easy:
+Alternatively you can stick something in that empty panel like your legend (though in this example it's better to not even have a legend because [it's redundant with the x-axis](/news/2023-09-27_faqs_week-05.html#double-encoding-and-excessive-legends)). The `reposition_legend()` function from the {lemon} package makes this really easy:
 
 ```{r plot-legend-corner, fig.width=8, fig.height=5, warning=FALSE, message=FALSE}
 library(lemon)
@@ -242,7 +242,7 @@ ggplot(rats_by_year, aes(x = borough, y = total)) +
 
 > Consider adding automatic commas to the x-axis by including `library(scales)` and adding `scale_x_continuous(labels = label_comma())`
 
-You can make nicer labels by formatting them with `label_comma()` (or any of the other `label_*()` functions) from the {scales} package. [See here for a lot more details](https://datavizs23.classes.andrewheiss.com/news/2023-06-27_faqs_session-05-06.html#i-have-numbers-like-20000-and-want-them-formatted-with-commas-like-20000.-can-i-do-that-automatically).
+You can make nicer labels by formatting them with `label_comma()` (or any of the other `label_*()` functions) from the {scales} package. [See here for a lot more details](/news/2023-09-19_faqs_week-04.html#i-have-numbers-like-20000-and-want-them-formatted-with-commas-like-20000.-can-i-do-that-automatically).
 
 ```{r comma-example, message=FALSE, warning=FALSE}
 library(scales)

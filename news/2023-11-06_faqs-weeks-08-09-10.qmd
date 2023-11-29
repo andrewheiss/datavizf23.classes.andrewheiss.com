@@ -27,7 +27,7 @@ In [exercise 7](/assignment/07-exercise.qmd) you created a coefficient plot for 
 
 ```{r load-data-fake, eval=FALSE}
 library(tidyverse)
-results_2016 <- read_csv("https://datavizs23.classes.andrewheiss.com/files/data/external_data/results_2016.csv")
+results_2016 <- read_csv("https://datavizf23.classes.andrewheiss.com/files/data/external_data/results_2016.csv")
 ```
 
 ```{r load-data-real, include=FALSE, message=FALSE}

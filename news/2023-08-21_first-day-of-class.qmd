@@ -10,7 +10,7 @@ Today's the first day of class, and I'm excited to get started!
 
 A few quick reminders:
 
-- If you haven't yet, please visit the class website at <https://datavizs23.classes.andrewheiss.com/>. This is where all the class materials live and it's the official source of dates and all other class information. I only use iCollege for collecting your assignments and posting answer keys (since it's password protected). Because it's not part of iCollege, you'll be able to reference it even after you graduate and lose access to GSU resources. You can even share it with others—it's just a website! (In the past I've had students spend like an hour downloading all the content from the class website so they can keep it; don't worry about that though—it'll all stay there indefinitely!)
+- If you haven't yet, please visit the class website at <https://datavizf23.classes.andrewheiss.com/>. This is where all the class materials live and it's the official source of dates and all other class information. I only use iCollege for collecting your assignments and posting answer keys (since it's password protected). Because it's not part of iCollege, you'll be able to reference it even after you graduate and lose access to GSU resources. You can even share it with others—it's just a website! (In the past I've had students spend like an hour downloading all the content from the class website so they can keep it; don't worry about that though—it'll all stay there indefinitely!)
 
 - As you'll see on the syllabus and schedule pages, the class is divided into 15 sessions (corresponding to a typical 15-week semester). Since this is a summer class, we're covering two sessions a week. You'll follow this general process for each session:
 
