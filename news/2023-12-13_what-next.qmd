@@ -1,0 +1,29 @@
+---
+title: "What comes next?"
+date: "2023-12-13T14:15"
+categories: [course details]
+---
+
+Hi everyone!
+
+I've finished grading all your final projects and have submitted your grades. I'm so proud of how much you all accomplished!
+
+A bunch of you have asked me what other R-related classes you can take. If you're a grad student, good news—there are a bunch!^[If you're an undergrad, there's not as much available; but you should consider graduate school at the Andrew Young School to get more policy analytics in the future!] The Andrew Young School has a whole [policy analytics initiative](https://aysps.gsu.edu/digital-landscape/courses-credentials/) and [online graduate certificate](https://aysps.gsu.edu/program/policy-analytics-graduate-cert/), with classes like these:
+
+- PMAP 8511: Big Data for Public Good
+- ECON 8720: Introduction to Data Management and Analysis
+- PMAP 8541: Coding in R for Policy Analytics
+- PMAP 8571: Machine Learning for Policy Analytics
+- PMAP 8561: GIS Applications
+
+I also teach a class called [Evaluation Research (PMAP 8521)](https://evalsp23.classes.andrewheiss.com/) in the spring. It's a really fun and useful class (I've had students get jobs because of it!). It's basically a class in econometrics, or econ-flavored statistics focused on causation.
+
+In the class you'll learn all about causal inference, or how to legally claim causation with statistics. In your past classes you were always taught "correlation isn't causation," which is mostly true, except when it's not. In PMAP 8521 you'll get to legitimately make causal claims. We'll cover fun tools like directed acyclic graphs (DAGs), randomized controlled trials, difference-in-differences analysis, regression discontinuity analysis, and instrumental variables. 
+
+It's all in R, too, so you'll learn how to do fancy stats in addition to making beautiful graphics. The R part is why former students have found jobs—tons of organizations are looking for R skills nowadays.
+
+If you can interpret regression results and if you know what statistical significance means, you have the stats background for the class.
+
+You can see [the website from the spring 2023 version of the class here](https://evalsp23.classes.andrewheiss.com/) (the 2024 one will be roughly the same at evalsp24 dot classes dot…), and you can see that it's full of videos and interactive code tutorials and other resources. It's an in-person class, but because we're still in a pandemic, I use a flipped-classroom approach and have students watch all the lecture videos before class, and we spend class time working on R stuff together in person.
+
+Have a great break!
